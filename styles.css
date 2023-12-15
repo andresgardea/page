@@ -293,9 +293,10 @@ img {
 .socialLinks {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    padding-bottom: 3rem;
+    gap: 2rem;
     align-items: flex-start;
-    height: 33vh;
 }
 
 .contactLogo {
@@ -303,6 +304,7 @@ img {
     text-align: center;
     width: 100%;
 }
+
 .contactSocials {
     display: flex;
     flex-direction: column;
@@ -311,15 +313,18 @@ img {
 .contactSocials a {
     text-decoration: none;
     color: #fff;
-    font-size: 18px;
-    padding: .3em .4em;
+    font-size: 1.5rem;
 }
 
-.info{
+.info {
     padding: 1rem 0;
     gap: 1rem;
     display: flex;
     flex-direction: column;
+}
+
+.name {
+    font-size: 1.5rem;
 }
 
 
@@ -367,7 +372,7 @@ img {
         width: calc(100% - 20vw);
     }
 
-    .image .contacto{
+    .image .contacto {
         grid-column: 2/3;
         grid-row: 3/4;
         width: 100%;
@@ -379,12 +384,12 @@ img {
         grid-row: 5/6;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         padding: 0;
-        gap: 0;
+        gap: 1rem;
     }
 
-    .backgroundZone{
+    .backgroundZone {
         min-height: 100vh;
     }
 

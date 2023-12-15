@@ -39,11 +39,11 @@ gsap.to("#Loading-Screen", {
 
 /*-----Cambio de Seccion-----*/
 const team = [
-    { name: "Andres Gardea", role: "Creative Director" },
-    { name: "Fotografo", role: "Brand Strategist" },
-    { name: "Diseñador", role: "Lead Designer" },
-    { name: "Programador", role: "He trabajado en páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio." },
-    { name: "", role: "" },
+    { name: "Andrés Gardea", desc: "Soy un Fotógrafo y Diseñador Gráfico de la ciudad de Chihuahua México." },
+    { name: "Fotógrafo", desc: "Me apasiona la fotografía de naturaleza y me especializo en fotografía de productos y retratos." },
+    { name: "Diseñador", desc: "Lorem ipsum, dolor sit amet..." },
+    { name: "Programador", desc: "He trabajado en páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio." },
+    { name: "", desc: "" },
 
 ];
 
@@ -95,7 +95,7 @@ document.addEventListener('mousemove', (e) => {
 const updateInfo = (slideNumber) => {
     const member = team[slideNumber - 1];
     document.querySelector('.info .name').textContent = member.name;
-    document.querySelector('.info .role').textContent = member.role;
+    document.querySelector('.info .desc').textContent = member.desc;
 };
 
 const animateSlide = (slideNumber, reveal) => {
