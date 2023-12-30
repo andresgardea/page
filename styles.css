@@ -25,7 +25,6 @@ html {
 
 h1 {
     font-size: 3.1rem;
-    font-weight: 800;
 }
 
 h2 {
@@ -34,7 +33,6 @@ h2 {
 
 h6 {
     font-weight: 300;
-    text-transform: uppercase;
 }
 
 figcaption {
@@ -205,6 +203,8 @@ img {
 
     text-align: center;
     font-size: 24rem;
+    font-weight: 100;
+    text-transform: uppercase;
     width: 100%;
     white-space: nowrap;
     animation: marquee 9s linear infinite;
@@ -336,14 +336,20 @@ img {
 
     .contanin {
         display: grid;
-        grid-template-rows: 7vh 1fr;
+        grid-template-rows: 7dvh 3dvh 1fr 3dvh 8dvh;
         grid-template-columns: 1fr;
+        height: 100dvh;
     }
 
     .nav-bar {
         position: relative;
         grid-column: 1/2;
         grid-row: 1/2;
+        height: 100%;
+        height: 7dvh;
+    }
+
+    .backgroundZone {
         height: 100%;
     }
 
@@ -354,10 +360,9 @@ img {
         transform: translate(0%, 0%);
         width: 100%;
         height: 100%;
-        min-height: 100vh;
         display: grid;
-        grid-template-rows: 7vh 2rem 66% 2rem 10vh 2rem 8vh;
-        grid-template-columns: 10vw 1fr 10vw;
+        grid-template-rows: 7dvh 3dvh 1fr 3dvh 8dvh;
+        grid-template-columns: 7vw 1fr 7vw;
     }
 
     .imageContainer {
@@ -368,8 +373,9 @@ img {
     }
 
     .image {
-        height: calc(100% - 25vh - 6rem);
-        width: calc(100% - 20vw);
+        height: calc(100dvh - 14dvh - 20dvh);
+        width: calc(100% - 14vw);
+        z-index: 1;
     }
 
     .image .contacto {
@@ -379,35 +385,59 @@ img {
         height: 100%;
     }
 
-    .info {
+    .info-container {
         grid-column: 2/3;
-        grid-row: 5/6;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        grid-row: 3/4;
+        width: 100%;
+        height: 100%;
         padding: 0;
-        gap: 1rem;
+        z-index: 2;
+        overflow: hidden;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: calc(100dvh - 14dvh - 20dvh) 1rem 1fr;
     }
 
-    .backgroundZone {
-        min-height: 100vh;
+    .info {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        padding: 0;
+        gap: 0;
+        justify-content: space-around;
     }
 
     .backgroundContent {
         display: grid;
-        grid-template-rows: 7vh 1fr 8vh;
+        grid-template-rows: 7dvh 3dvh 1fr 3dvh 8dvh;
         grid-template-columns: 1fr;
     }
 
     .backgroundTitle {
-        font-size: 3.5rem;
+        font-size: 3rem;
         animation: none;
         grid-column: 1/2;
-        grid-row: 3/4;
+        grid-row: 5/6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #t-5 {
-        height: calc(100% - 15vh - 4rem);
+        grid-row: 3/4;
+        grid-column: 2/3;
+        height: 100%;
+        width: 100%;
+    }
+
+    .image .contacto {
+        padding: 0rem 2rem;
+        justify-content: space-around;
+    }
+
+    .socialLinks {
+        padding: 0;
+        margin-bottom: 1rem;
     }
 
     .contactLogo {
