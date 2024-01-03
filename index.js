@@ -1,12 +1,12 @@
- /*----Pantalla de carga-----*/
+/*----Pantalla de carga-----*/
 
- gsap.to("#Loading-Screen", {
+gsap.to("#Loading-Screen", {
     opacity: 1,
     duration: .5,
     delay: .2
 });
 
- gsap.to(".loader", {
+gsap.to(".loader", {
     opacity: 1,
     duration: 1,
 });
@@ -149,7 +149,7 @@ if (window.screen.width <= 600) {
         else {
             handleLeftclick();
         }
-    
+
         console.log("Click");
     });
 }
