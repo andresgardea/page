@@ -23,6 +23,18 @@ html {
     font-size: 12px;
 }
 
+@media (max-width: 8.5in) {
+    :root {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 5.5in) {
+    :root {
+        font-size: 11px;
+    }
+}
+
 h1 {
     font-size: 3.1rem;
 }
@@ -91,7 +103,7 @@ img {
 }
 
 /*Loading Screen*/
-#Loading-Screen {
+#loadingScreen {
     position: fixed;
     top: 0;
     left: 0;
@@ -108,7 +120,7 @@ img {
     align-items: center;
 }
 
-.loader {
+.Loader {
     position: relative;
     width: 50vw;
     height: 100%;
@@ -119,7 +131,7 @@ img {
 
 /* Loader */
 
-.images {
+.loaderImgContainer {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -129,7 +141,7 @@ img {
     z-index: 2;
 }
 
-.img-holder {
+.Image-Holder {
     position: relative;
     width: 100%;
     height: 65vh;
@@ -137,13 +149,13 @@ img {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-.img-holder img {
+.Image-Holder img {
     position: absolute;
     top: 0;
     left: -110%;
 }
 
-.Loading-Info {
+.loadingInfo {
     width: 100%;
     height: 25vh;
     display: flex;
@@ -154,43 +166,59 @@ img {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-.Loading-Text {
+.loadingText {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.Counter p,
-.Loading-Text p {
+.counter p,
+.loadingText p {
     font-size: 12rem;
     font-weight: 100;
     text-transform: uppercase;
     white-space: nowrap;
 }
 
-.Counter p span,
-.Loading-Text p span {
+.counter p span,
+.loadingText p span {
     position: relative;
     z-index: -2;
     color: #ffffff;
 }
 
-.Loading-Text p span {
+.loadingText p span {
     position: relative;
     top: 200px;
 }
 
 @media only screen and (max-width: 600px) {
-    .loader{
+    #loadingScreen{
+        align-items: baseline;
+    }
+
+    .Loader{
         width: 86vh;
+        height: 100dvh;
     }
 
-    .images {
-        width: 86vw;
-        height: 80dvh;
+    .loaderImgContainer {
+        top: 43dvh;
+        height: calc(100dvh - 14dvh - 20dvh);
+        width: calc(100% - 14vw);
     }
 
-    .Loading-Text p {
+    .Image-Holder {
+        height: 100%;
+        width: 100%;
+    }
+
+    .counter p{
+        font-size: 11rem;
+        text-align: center;
+    }
+
+    .loadingText p {
         font-size: 6.4rem;
     }
 }
@@ -470,7 +498,7 @@ img {
         height: 100%;
     }
 
-    .info-container {
+    .infoContainer {
         grid-column: 2/3;
         grid-row: 3/4;
         width: 100%;

@@ -1,11 +1,11 @@
 /*----Pantalla de carga-----*/
 
-gsap.to("#Loading-Screen", {
+gsap.to("#loadingScreen", {
     opacity: 1,
     duration: .5,
 });
 
-gsap.to(".loader", {
+gsap.to(".Loader", {
     opacity: 1,
     duration: .2,
 });
@@ -18,10 +18,10 @@ gsap.to(".contanin", {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    splitTextIntoSpans(".Loading-Text p");
+    splitTextIntoSpans(".loadingText p");
     splitTextIntoSpans(".backgroundTitle");
 
-    gsap.to(".img-holder img", {
+    gsap.to(".Image-Holder img", {
         left: 0,
         stagger: 0.1,
         ease: "power4.out",
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         delay: 4,
     });
 
-    gsap.to(".img-holder img", {
+    gsap.to(".Image-Holder img", {
         left: "110%",
         stagger: -0.1,
         ease: "power4.out",
@@ -51,11 +51,11 @@ function splitTextIntoSpans(selector) {
 }
 
 function startLoader() {
-    var CounterElement = document.querySelector(".Counter p");
-    var logoElement = document.querySelector(".Loading-Text p");
+    var counterElement = document.querySelector(".counter p");
+    var logoElement = document.querySelector(".loadingText p");
     var currentValue = 0;
 
-    function updateCounter() {
+    function updatecounter() {
         if (currentValue === 100) {
             animateText();
             return;
@@ -63,7 +63,7 @@ function startLoader() {
 
         currentValue += Math.floor(Math.random() * 10) + 1;
         currentValue = currentValue > 100 ? 100 : currentValue;
-        CounterElement.innerHTML =
+        counterElement.innerHTML =
             currentValue
                 .toString()
                 .split("")
@@ -71,28 +71,28 @@ function startLoader() {
                 .join("") + "<span>%</span>";
 
         var delay = Math.floor(Math.random() * 200) + 100;
-        setTimeout(updateCounter, delay);
+        setTimeout(updatecounter, delay);
     }
 
     function animateText() {
 
         setTimeout(() => {
 
-            gsap.to(".Counter p span", {
+            gsap.to(".counter p span", {
                 top: "-400px",
                 stagger: 0.1,
                 ease: "power3.inOut",
                 duration: 1,
             });
 
-            gsap.to(".Loading-Text p span", {
+            gsap.to(".loadingText p span", {
                 top: "0",
                 stagger: 0.1,
                 ease: "power3.inOut",
                 duration: 1,
             });
 
-            gsap.to(".Loading-Text p span", {
+            gsap.to(".loadingText p span", {
                 top: "-400px",
                 stagger: 0.1,
                 ease: "power3.inOut",
@@ -100,7 +100,7 @@ function startLoader() {
                 delay: 3,
             });
 
-            gsap.to("#Loading-Screen", {
+            gsap.to("#loadingScreen", {
                 opacity: 0,
                 ease: "power4.inOut",
                 // translateY: "101vh",
@@ -152,7 +152,7 @@ function startLoader() {
         }, 300);
     }
 
-    updateCounter();
+    updatecounter();
 }
 
 startLoader();
