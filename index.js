@@ -3,24 +3,11 @@
 gsap.to("#Loading-Screen", {
     opacity: 1,
     duration: .5,
-    delay: .2
 });
 
 gsap.to(".loader", {
     opacity: 1,
-    duration: 1,
-});
-
-gsap.to(".loading-bar", {
-    ease: "power3.inOut",
-    width: "100%",
-    duration: 1.5
-});
-
-gsap.to(".loader", {
-    opacity: 0,
-    duration: .5,
-    delay: 1.6
+    duration: .2,
 });
 
 
@@ -30,15 +17,148 @@ gsap.to(".contanin", {
     delay: 1
 });
 
-gsap.to("#Loading-Screen", {
-    duration: 0.6,
-    ease: "power4.inOut",
-    translateY: "101vh",
-    delay: 1.6
+document.addEventListener("DOMContentLoaded", function () {
+    splitTextIntoSpans(".Loading-Text p");
+    splitTextIntoSpans(".backgroundTitle");
+
+    gsap.to(".img-holder img", {
+        left: 0,
+        stagger: 0.1,
+        ease: "power4.out",
+        duration: 1.5,
+        delay: 4,
+    });
+
+    gsap.to(".img-holder img", {
+        left: "110%",
+        stagger: -0.1,
+        ease: "power4.out",
+        duration: 1.5,
+        delay: 7,
+    });
 });
 
+function splitTextIntoSpans(selector) {
+    var element = document.querySelector(selector);
+    if (element) {
+        var text = element.innerText;
+        var splitText = text
+            .split("")
+            .map((char) => `<span>${char}</span>`)
+            .join("");
+        element.innerHTML = splitText;
+    }
+}
+
+function startLoader() {
+    var CounterElement = document.querySelector(".Counter p");
+    var logoElement = document.querySelector(".Loading-Text p");
+    var currentValue = 0;
+
+    function updateCounter() {
+        if (currentValue === 100) {
+            animateText();
+            return;
+        }
+
+        currentValue += Math.floor(Math.random() * 10) + 1;
+        currentValue = currentValue > 100 ? 100 : currentValue;
+        CounterElement.innerHTML =
+            currentValue
+                .toString()
+                .split("")
+                .map((char) => `<span>${char}</span>`)
+                .join("") + "<span>%</span>";
+
+        var delay = Math.floor(Math.random() * 200) + 100;
+        setTimeout(updateCounter, delay);
+    }
+
+    function animateText() {
+
+        setTimeout(() => {
+
+            gsap.to(".Counter p span", {
+                top: "-400px",
+                stagger: 0.1,
+                ease: "power3.inOut",
+                duration: 1,
+            });
+
+            gsap.to(".Loading-Text p span", {
+                top: "0",
+                stagger: 0.1,
+                ease: "power3.inOut",
+                duration: 1,
+            });
+
+            gsap.to(".Loading-Text p span", {
+                top: "-400px",
+                stagger: 0.1,
+                ease: "power3.inOut",
+                duration: 1,
+                delay: 3,
+            });
+
+            gsap.to("#Loading-Screen", {
+                opacity: 0,
+                ease: "power4.inOut",
+                // translateY: "101vh",
+                duration: 1,
+                delay: 4,
+            });
+
+
+            gsap.to(".imageZone img", {
+                scale: 1,
+                opacity: 1,
+                ease: "power3.inOut",
+                duration: 1,
+                delay: 4,
+            });
+
+            gsap.to(".backgroundContent .backgroundTitle span", {
+                top: "0",
+                opacity: 1,
+                stagger: 0.1,
+                ease: "power3.inOut",
+                duration: 1,
+                delay: 4,
+            });
+
+            gsap.to(".nav-bar", {
+                opacity: 1,
+                top: "0",
+                ease: "power3.inOut",
+                duration: 2,
+                delay: 4,
+            });
+
+            gsap.to(".info p", {
+                top: "0",
+                stagger: 0.1,
+                opacity: 1,
+                ease: "power3.inOut",
+                duration: 2,
+                delay: 4,
+            });
+
+            gsap.to(".clickZone", {
+                display: "block",
+                delay: 4,
+                duration: 0
+            });
+
+        }, 300);
+    }
+
+    updateCounter();
+}
+
+startLoader();
+
 /*-----Cambio de Seccion-----*/
-const team = [
+const activity = [
     { name: "Andrés Gardea", desc: "Soy un Fotógrafo y Diseñador Gráfico de la ciudad de Chihuahua México." },
     { name: "Fotógrafo", desc: "Me apasiona la fotografía de naturaleza y me especializo en fotografía de productos y retratos." },
     { name: "Diseñador", desc: "Lorem ipsum, dolor sit amet..." },
@@ -93,9 +213,9 @@ document.addEventListener('mousemove', (e) => {
 });
 
 const updateInfo = (slideNumber) => {
-    const member = team[slideNumber - 1];
-    document.querySelector('.info .name').textContent = member.name;
-    document.querySelector('.info .desc').textContent = member.desc;
+    const work = activity[slideNumber - 1];
+    document.querySelector('.info .name').textContent = work.name;
+    document.querySelector('.info .desc').textContent = work.desc;
 };
 
 const animateSlide = (slideNumber, reveal) => {
@@ -149,8 +269,6 @@ if (window.screen.width <= 600) {
         else {
             handleLeftclick();
         }
-
-        console.log("Click");
     });
 }
 
