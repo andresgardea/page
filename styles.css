@@ -289,7 +289,7 @@ img {
 
 .backgroundContent .backgroundTitle span {
     position: relative;
-    top: 30vw;
+    top: -30vw;
     opacity: 0;
 }
 
