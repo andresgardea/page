@@ -15,8 +15,8 @@ html {
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
     scroll-behavior: smooth;
-    font-family: Type;
     background-color: #1c1c1e;
+    font-family: 'Satoshi-Variable';
 }
 
 :root {
@@ -91,9 +91,11 @@ figcaption {
 }
 
 @font-face {
-    font-family: Type;
-    src: url(./Media/Fonts/Satoshi-Variable.ttf);
-    font-display: block;
+    font-family: 'Satoshi-Variable';
+    src: url(media/fonts/Satoshi-Variable.ttf);
+    font-weight: 300 900;
+    font-display: swap;
+    font-style: normal;
 }
 
 img {
@@ -193,11 +195,11 @@ img {
 }
 
 @media only screen and (max-width: 600px) {
-    #loadingScreen{
+    #loadingScreen {
         align-items: baseline;
     }
 
-    .Loader{
+    .Loader {
         width: 86vh;
         height: 100dvh;
     }
@@ -213,7 +215,7 @@ img {
         width: 100%;
     }
 
-    .counter p{
+    .counter p {
         font-size: 11rem;
         text-align: center;
     }
@@ -237,24 +239,31 @@ img {
     position: fixed;
     width: 100vw;
     height: 6vh;
-    top: -10vh;
     left: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #080808;
-    opacity: 0;
     z-index: 10;
     padding: 0em 2em;
 }
 
+.logo {
+    font-size: 1.4rem;
+    top: -10vh;
+    opacity: 0;
+    font-weight: 400;
+    position: relative;
+}
 
 .reloj {
     margin-top: 0;
     font-size: 1.4rem;
-
+    top: -10vh;
+    opacity: 0;
+    font-weight: 400;
     -webkit-user-select: none;
     user-select: none;
+    position: relative;
 }
 
 .contanin {
@@ -273,7 +282,7 @@ img {
     overflow: hidden;
 }
 
-.clickZone{
+.clickZone {
     display: none;
 }
 
@@ -559,6 +568,104 @@ img {
         text-align: center;
         width: 100%;
     }
+}
 
+/* Pagina de Foto */
+.photo-page {
+    color: #ffffff;
+}
 
+.menu {
+    position: absolute;
+    left: 2em;
+    bottom: 4em;
+}
+
+.menu__item {
+    display: inline-block;
+    opacity: 0;
+    position: relative;
+    top: +10vh;
+}
+
+.menu__item-image_wrapper {
+    position: fixed;
+    top: calc(6vh + 2em);
+    right: 2em;
+    /* transform: translate(-50%, -50%); */
+    width: 600px;
+    height: 400px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.menu__item-image_inner .menu__item-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu__item-text {
+    position: relative;
+    font-weight: 400;
+    font-size: 4vw;
+    line-height: 1;
+    color: #d1ccbc;
+    opacity: 1;
+    transition: opacity 350ms ease;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu__item-text-smaller {
+    position: relative;
+    font-weight: 300;
+    font-size: 2.4vw;
+    line-height: 1;
+    color: #d1ccbc;
+    opacity: 1;
+    transition: opacity 350ms ease;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu__item:hover .menu__item-text {
+    color: #cadd1b;
+}
+
+.menu__item:hover .menu__item-image_wrapper {
+    z-index: -2;
+}
+
+@media only screen and (max-width: 600px) {
+    .menu__item-image_wrapper {
+        position: fixed;
+        top: calc(7dvh + 3dvh);
+        right: 7vw;
+        height: calc(100dvh - 14dvh - 20dvh);
+        width: calc(100% - 14vw);
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    .menu__item {
+        margin-top: .8rem;
+    }
+
+    .menu__item-text {
+        font-weight: 400;
+        font-size: 3.4rem;
+    }
+
+    .menu__item-text-smaller {
+        font-weight: 300;
+        font-size: 1.6rem;
+    }
 }
