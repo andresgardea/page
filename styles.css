@@ -661,11 +661,11 @@ img {
 
     .menu__item-text {
         font-weight: 400;
-        font-size: 3.4rem;
+        font-size: 3rem;
     }
 
     .menu__item-text-smaller {
         font-weight: 300;
-        font-size: 1.6rem;
+        font-size: 1.2rem;
     }
 }
