@@ -20,7 +20,7 @@
     <!--Pinterest-->
     <meta name="p:domain_verify" content="4a3394b936c074db8d30aefb192e5dd9" />
 
-    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.min.css'>
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
@@ -73,14 +73,14 @@
         </div>
     </section>
 
-    <section class="contanin">
+    <section class="contain">
 
         <nav class="nav-bar">
             <h2 class="logo">Andres Gardea</h2>
             <p id="time-text" class="reloj"></p>
         </nav>
 
-        <section class="container">
+        <section class="photo-container">
             <div class="menu">
                 <div class="menu__item">
                     <div class="menu__item-image_wrapper">
@@ -211,13 +211,6 @@
             });
         });
 
-        /*-----Reloj-----*/
-        var ChihuahuaTime = function () {
-            document.getElementById("time-text").innerHTML = new Date().toLocaleString("en-US", { timeZone: "America/Chihuahua", timeStyle: "medium" })
-        }
-
-        ChihuahuaTime();
-        setInterval(ChihuahuaTime, 1000);
     </script>
 
 </body>

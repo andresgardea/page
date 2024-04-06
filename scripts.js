@@ -159,6 +159,14 @@ function startLoader() {
 
 startLoader();
 
+/*-----Reloj-----*/
+var ChihuahuaTime = function () {
+    document.getElementById("time-text").innerHTML = new Date().toLocaleString("en-US", { timeZone: "America/Chihuahua", timeStyle: "medium" })
+  }
+  
+  ChihuahuaTime();
+  setInterval(ChihuahuaTime, 1000);
+
 /*-----Cambio de Seccion-----*/
 const activity = [
     { name: "Andrés Gardea", desc: "Soy un Fotógrafo y Diseñador Gráfico de la ciudad de Chihuahua México." },
@@ -277,11 +285,3 @@ if (window.screen.width <= 600) {
 /*
 setInterval(handleRightclick, 9000);
 */
-
-/*-----Reloj-----*/
-var ChihuahuaTime = function () {
-  document.getElementById("time-text").innerHTML = new Date().toLocaleString("en-US", { timeZone: "America/Chihuahua", timeStyle: "medium" })
-}
-
-ChihuahuaTime();
-setInterval(ChihuahuaTime, 1000);
