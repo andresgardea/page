@@ -273,6 +273,10 @@ img {
     opacity: 0;
 }
 
+.contain-2{
+    opacity: 0;
+}
+
 .backgroundZone {
     position: absolute;
     top: 0;
