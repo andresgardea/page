@@ -11,7 +11,7 @@ gsap.to(".Loader", {
 });
 
 
-gsap.to(".contanin, .contain-2", {
+gsap.to(".contain, .contain-2", {
     opacity: 1,
     duration: 0.1,
     delay: 1
