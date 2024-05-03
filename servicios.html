@@ -228,10 +228,10 @@
                     </div>
                     <div class="gallery-item">
                         <div class="item-img">
-                            <img class="img-info" src="Media/Servicios/Gastronomica-5.webp" alt="">
+                            <img class="img-info" src="Media/Servicios/Gastronomica-5.webp" alt="Fotografia de Producto para la temporada de chiles en Nogada.">
                         </div>
                         <div class="item-name">
-                            <p>Lorem ipsum dolor sit amet.</p>
+                            <p></p>
                         </div>
                     </div>
                     <div class="gallery-item">
@@ -239,15 +239,15 @@
                             <img class="img-info" src="Media/Servicios/Gastronomica-6.webp" alt="">
                         </div>
                         <div class="item-name">
-                            <p>Lorem ipsum dolor sit amet.</p>
+                            <p></p>
                         </div>
                     </div>
                     <div class="gallery-item">
                         <div class="item-img">
-                            <img class="img-info" src="Media/Servicios/Gastronomica-7.webp" alt="">
+                            <img class="img-info" src="Media/Servicios/Gastronomica-7.webp" alt="Fotografia para un negocio local de empanadas.">
                         </div>
                         <div class="item-name">
-                            <p>Lorem ipsum dolor sit amet.</p>
+                            <p></p>
                         </div>
                     </div>
                 </div>
@@ -290,6 +290,10 @@
                 smooth: false,
             },
         });
+
+        setTimeout(function () { scroll.update(); console.log('update scroller') }, 5000);
+
+
 
         const tl = gsap.timeline({ paused: true });
         const clickZone2 = document.querySelectorAll('.gallery-item');
