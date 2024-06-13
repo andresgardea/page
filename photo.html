@@ -20,7 +20,7 @@
     <!--Pinterest-->
     <meta name="p:domain_verify" content="4a3394b936c074db8d30aefb192e5dd9" />
 
-    <link rel='stylesheet' type='text/css' media='screen' href='Styles/styles.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Styles/styles.css'>
 
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -31,8 +31,9 @@
     <meta name="robots" content="noindex">
 
 
-    <meta name="robots" content="index">
-    <link rel="canonical" href="https://andresgardea.github.io/page/index.html" />
+    <meta name="robots" content="noindex">
+
+    <!-- <link rel="canonical" href="https://andresgardea.github.io/page/index.html" /> -->
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VFT80CKWT"></script>
@@ -45,7 +46,7 @@
     </script>
 </head>
 
-<body class="photo-page">
+<body class="photo-page" data-scroll-container>
 
     <section id="loadingScreen">
         <div class="Loader">
@@ -76,86 +77,225 @@
         </div>
     </section>
 
-    <section class="contain">
+    <section class="contain-2">
 
-        <nav class="nav-bar">
+        <nav class="nav-bar" data-scroll-section-id="header" data-scroll-sticky data-scroll-target="#contain">
             <h2 class="logo">Andres Gardea</h2>
             <p id="time-text" class="reloj"></p>
         </nav>
 
-        <section class="photo-container">
-            <div class="menu">
-                <div class="menu__item">
-                    <div class="menu__item-image_wrapper">
-                        <div class="menu__item-image_inner">
-                            <img class="menu__item-image" src="Media/Producto-1.webp" />
-                        </div>
-                    </div>
-                    <span class="menu__item-text"><span class="menu__item-innertext">Producto /</span></span>
-                </div>
+        <section class="redes-container" id="contain" data-scroll-section data-scroll-section-id="contain">
+            <h1 class="container-title">Fotógrafo en Chihuahua</h1>
 
-                <div class="menu__item">
-                    <div class="menu__item-image_wrapper">
-                        <div class="menu__item-image_inner">
-                            <img class="menu__item-image" src="assets/img_02.png" />
-                        </div>
-                    </div>
-                    <span class="menu__item-text"><span class="menu__item-innertext">&nbsp;Retrato</span></span>
-                </div>
-                <br />
+            <div class="container-section">
+                <p class="container-text">Sea un restaurante, una tienda, una industria o un prestador de servicios la
+                    precensica online es
+                    fundamental para que puedas</p>
+                <p class="container-text">La presencia en redes sociales se ha vuelto algo fundamental para todas las
+                    marcas, sin importar el rubro de tu negocio es importante que tenga una buena prescencia en redes
+                    sociales, esto es algo que se puede lograr mediante una buena estrategia publicitaria implementada
+                    de
+                    manera correcta.</p>
+            </div>
 
-                <div class="menu__item">
-                    <div class="menu__item-image_wrapper">
-                        <div class="menu__item-image_inner">
-                            <img class="menu__item-image" src="Media/Gastronomica-1.webp" />
-                        </div>
-                    </div>
-                    <span class="menu__item-text"><span class="menu__item-innertext">Gastronómica /</span></span>
-                </div>
 
-                <div class="menu__item">
-                    <div class="menu__item-image_wrapper">
-                        <div class="menu__item-image_inner">
-                            <img class="menu__item-image" src="assets/img_04.png" />
-                        </div>
-                    </div>
-                    <span class="menu__item-text"><span class="menu__item-innertext">&nbsp;Social</span></span>
-                </div>
-                <br />
+            <h2 class="container-title">Sesiones Fotográficas</h2>
 
-                <!-- Areas de Trabajo -->
-                <div class="menu__item">
-                    <div class="menu__item-image_wrapper">
-                        <div class="menu__item-image_inner">
-                            <img class="menu__item-image" src="assets/img_05.jpeg" />
+            <div class="container-section">
+                <p class="container-text">Una buena fotografia puede ser la diferencia que haga que alguien visite tu
+                    negocio,</p>
+                <p class="container-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem qui minima
+                    eligendi eaque odio optio facilis similique dolores, inventore esse quo nobis illum officia
+                    voluptatum debitis? Quibusdam rerum at necessitatibus atque inventore hic nulla dolore. Sed,
+                    exercitationem maxime. Qui cum quas adipisci fuga saepe mollitia voluptatum numquam nobis natus
+                    laborum?</p>
+            </div>
+
+            <div class="container-section">
+                <div class="gallery-container gallery-container-2">
+                    <div class="gallery-item">
+                        <div class="item-img">
+                            <img class="img-info" src="Media/Servicios/Gastronomica-1.webp"
+                                alt="Fotografia Gastronómica para todo tipo de restaurantes.">
+                        </div>
+                        <div class="item-name">
+                            <p>Fotografia Gastronómica</p>
                         </div>
                     </div>
-                    <span class="menu__item-text-smaller"><span class="menu__item-innertext">Diseño Gráfico
-                            /</span></span>
-                </div>
-                <div class="menu__item">
-                    <div class="menu__item-image_wrapper">
-                        <div class="menu__item-image_inner">
-                            <img class="menu__item-image" src="Media/Desarrollo-Web-1.gif" />
+                    <div class="gallery-item">
+                        <div class="item-img">
+                            <img class="img-info" src="Media/Servicios/Producto-1.webp"
+                                alt="Sesiones de Fotografia de Producto.">
+                        </div>
+                        <div class="item-name">
+                            <p>Fotografia de Producto.</p>
                         </div>
                     </div>
-                    <span class="menu__item-text-smaller"><span class="menu__item-innertext">&nbsp;Desarrollo Web
-                            /</span></span>
-                </div>
-                <div class="menu__item">
-                    <div class="menu__item-image_wrapper">
-                        <div class="menu__item-image_inner">
-                            <img class="menu__item-image" src="Media/001.webp" />
+                    <div class="gallery-item">
+                        <div class="item-img">
+                            <img class="img-info" src="Media/Servicios/Gastronomica-2.webp" alt="">
+                        </div>
+                        <div class="item-name">
+                            <p>Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
-                    <span class="menu__item-text-smaller"><span class="menu__item-innertext">&nbsp;Andres
-                            Gardea</span></span>
+                    <div class="gallery-item">
+                        <div class="item-img">
+                            <img class="img-info" src="Media/Servicios/Producto-2.webp" alt="">
+                        </div>
+                        <div class="item-name">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="item-img">
+                            <img class="img-info" src="Media/Servicios/Producto-3.webp"
+                                alt="Los Peligros del Fast Fashion/Moda Rápida.">
+                        </div>
+                        <div class="item-name">
+                            <p>Fast Fashion.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="item-img">
+                            <img class="img-info" src="Media/Servicios/Gastronomica-4.webp" alt="">
+                        </div>
+                        <div class="item-name">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="item-img">
+                            <img class="img-info" src="Media/Servicios/Gastronomica-5.webp"
+                                alt="Fotografia de Producto para la temporada de chiles en Nogada.">
+                        </div>
+                        <div class="item-name">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="item-img">
+                            <img class="img-info" src="Media/Servicios/Gastronomica-6.webp" alt="">
+                        </div>
+                        <div class="item-name">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="item-img">
+                            <img class="img-info" src="Media/Servicios/Gastronomica-7.webp"
+                                alt="Fotografia para un negocio local de empanadas.">
+                        </div>
+                        <div class="item-name">
+                            <p></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <footer class="redes-footer" data-scroll-section data-scroll-section-id="footer">
+            <div class="footer-text">
+                <p>Fotografías tomadas por <a href="https://andresgardea.github.io/page/index.html"
+                        target="_blank">@Andres Gardea</a></p>
+            </div>
+        </footer>
+
+        <div class="img-modal">
+            <div class="img-name modal-item">
+                <p class="copy"></p>
+            </div>
+            <div class="close-btn modal-item">
+                <p>close</p>
+            </div>
+            <div class="img">
+                <img class="resource" src="" alt="" />
+            </div>
+        </div>
     </section>
 
-contain    <script src="Scripts/scripts.min.js"></script>
+    <script src="Scripts/scripts.min.js"></script>
+    <script src="Scripts/locomotive-scroll.min.js"></script>
+    <script>
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            multmultiplier: 1,
+            smooth: true,
+            mobile: {
+                breakpoint: 0,
+                smooth: false,
+            },
+            tablet: {
+                breakpoint: 0,
+                smooth: false,
+            },
+        });
+
+        setTimeout(function () { scroll.update(); console.log('update scroller') }, 5000);
+
+
+
+        const tl = gsap.timeline({ paused: true });
+        const clickZone2 = document.querySelectorAll('.gallery-item');
+        const imgInfo = document.querySelectorAll('.img-info');
+        const copy = document.querySelector('.copy');
+        const resource = document.querySelector('.resource');
+
+        imgInfo.forEach(clickZone2 => {
+            clickZone2.addEventListener("click", () => {
+                addImage(clickZone2.getAttribute('src'), clickZone2.getAttribute('alt'))
+                tl.reversed(!tl.reversed());
+            });
+        });
+
+        const addImage = (srcImage, copyImage) => {
+            resource.src = srcImage;
+            copy.innerHTML = copyImage;
+        }
+
+        const closeBtn = document.querySelector(".close-btn");
+        if (closeBtn) {
+            closeBtn.addEventListener("click", function () {
+                tl.reversed(!tl.reversed());
+            });
+        }
+
+        function revealModal() {
+            tl.to(".img-modal", 0.75, {
+                clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)",
+                ease: "power4.out",
+                pointerEvents: "auto",
+            });
+
+            tl.to(".gallery-container, .container", 0.01, {
+                pointerEvents: "none",
+            });
+
+            tl.to(".img-modal .img", 0.75, {
+                clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)",
+                ease: "power4.out",
+            });
+
+            tl.to(
+                ".modal-item p",
+                1,
+                {
+                    top: 0,
+                    ease: "power4.out",
+                    opacity: 1,
+                    stagger: {
+                        amount: 0.2,
+                    },
+                },
+                "<"
+            ).reverse();
+        }
+
+        revealModal();
+
+
+
+    </script>
     <script>
         const { gsap } = window;
 
