@@ -512,6 +512,7 @@ html.has-scroll-dragging {
 
     .backgroundZone {
         height: 100%;
+        z-index: 1;
     }
 
     .imageZone {
@@ -524,6 +525,7 @@ html.has-scroll-dragging {
         display: grid;
         grid-template-rows: 7dvh 3dvh 1fr 3dvh 8dvh;
         grid-template-columns: 7vw 1fr 7vw;
+        z-index: 2;
     }
 
     .imageContainer {
@@ -531,6 +533,7 @@ html.has-scroll-dragging {
         grid-row: 3/4;
         width: 100%;
         height: 100%;
+        z-index: 3;
     }
 
     .image {
