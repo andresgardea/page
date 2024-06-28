@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         stagger: -0.1,
         ease: "power4.out",
         duration: 1.5,
-        delay: 7,
+        delay: 7.2,
     });
 });
 
