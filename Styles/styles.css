@@ -323,6 +323,7 @@ html.has-scroll-dragging {
 
 .clickZone {
     display: none;
+    pointer-events: none;
 }
 
 .backgroundContent {
@@ -430,6 +431,10 @@ html.has-scroll-dragging {
 }
 
 .t-5 {
+    background-color: #ac8c8c;
+}
+
+.t-6 {
     background-color: #8f8f8f;
 }
 
@@ -459,6 +464,7 @@ html.has-scroll-dragging {
     font-size: 5rem;
     text-align: center;
     width: 100%;
+    font-weight: lighter;
 }
 
 .contactSocials {
@@ -587,7 +593,8 @@ html.has-scroll-dragging {
         align-items: center;
     }
 
-    #t-5 {
+    #t-5,
+    #t-6 {
         grid-row: 3/4;
         grid-column: 2/3;
         height: 100%;
@@ -740,7 +747,7 @@ html.has-scroll-dragging {
     width: 100%;
 }
 
-.gallery-container-2 .gallery-item{
+.gallery-container-2 .gallery-item {
     height: 45vh;
 
 }
@@ -908,7 +915,7 @@ html.has-scroll-dragging {
     color: #ffffff;
 }
 
-.redes-page .nav-bar{
+.redes-page .nav-bar {
     /* mix-blend-mode: difference; */
     background-color: #1c1c1e;
 }
@@ -960,11 +967,11 @@ html.has-scroll-dragging {
         padding: 0;
     }
 
-    .redes-container .container-section{
+    .redes-container .container-section {
         flex-direction: column;
     }
 
-    .redes-container .container-title{
+    .redes-container .container-title {
         padding: 0 2em;
     }
 
@@ -990,6 +997,6 @@ html.has-scroll-dragging {
     align-items: center;
 }
 
-.footer-text a{
+.footer-text a {
     color: #ffffff;
 }

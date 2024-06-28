@@ -17,6 +17,12 @@ gsap.to(".contain, .contain-2", {
     delay: 1
 });
 
+gsap.to(".clickZone", {
+    pointerEvents: "auto",
+    duration: 0,
+    delay: 8.8
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     splitTextIntoSpans(".loadingText p");
     splitTextIntoSpans(".backgroundTitle");
@@ -52,7 +58,7 @@ function splitTextIntoSpans(selector) {
 
 function startLoader() {
     var counterElement = document.querySelector(".counter p");
-    var logoElement = document.querySelector(".loadingText p");
+    // var logoElement = document.querySelector(".loadingText p");
     var currentValue = 0;
 
     function updatecounter() {
@@ -171,8 +177,9 @@ var ChihuahuaTime = function () {
 const activity = [
     { name: "Andrés Gardea", desc: "Soy un Fotógrafo y Diseñador Gráfico de la ciudad de Chihuahua México." },
     { name: "Fotógrafo", desc: "Me apasiona la fotografía de naturaleza y me especializo en fotografía de productos y retratos." },
-    { name: "Diseñador", desc: "Lorem ipsum, dolor sit amet..." },
-    { name: "Programador", desc: "He trabajado en páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio." },
+    { name: "Diseñador", desc: "Estudio Diseño y Comunicación Gráfica, realizo trabajos de diseño tanto digital como tradicional." },
+    { name: "Programador", desc: "He trabajado desarrollando y lanzando páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio." },
+    { name: "", desc: "" },
     { name: "", desc: "" },
 
 ];
@@ -184,7 +191,7 @@ const cursorWidth = cursor.offsetWidth / 2;
 const cursorHeight = cursor.offsetHeight / 2;
 
 let currentSlide = 1;
-const totalSlides = 5;
+const totalSlides = 6;
 
 const updateCursorClass = (xPosition) => {
     const halfPageWidth = window.innerWidth / 2;
