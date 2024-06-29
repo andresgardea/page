@@ -20,7 +20,7 @@ gsap.to(".contain, .contain-2", {
 gsap.to(".clickZone", {
     pointerEvents: "auto",
     duration: 0,
-    delay: 8.8
+    delay: 8.7
 });
 
 document.addEventListener("DOMContentLoaded", function () {
