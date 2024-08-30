@@ -182,8 +182,11 @@ html.has-scroll-dragging {
     position: relative;
     width: 100%;
     height: 65vh;
-    margin: 0 auto;
+    margin: 10px auto;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+    display: flex;
+
 }
 
 .Image-Holder img {
@@ -267,6 +270,8 @@ html.has-scroll-dragging {
     top: -10px;
     left: 0px;
     font-size: 30px;
+    z-index: 2;
+    color: #1c1c1e;
 }
 
 /*Barra de Navegacion*/
@@ -302,11 +307,41 @@ html.has-scroll-dragging {
     position: relative;
 }
 
+.indices {
+    width: 25vw;
+    height: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.25em;
+}
+
+.index {
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background: #1c1c1e;
+}
+
+.index-highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #fff;
+    transform: scaleX(100%);
+}
+
+
+/* -------------------------------------------- */
+
 .contain {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     opacity: 0;
+    color: #1c1c1e;
 }
 
 .contain-2 {
@@ -320,10 +355,11 @@ html.has-scroll-dragging {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    cursor: none;
 }
 
 .clickZone {
-    display: none;
+    display: block;
     pointer-events: none;
 }
 
@@ -333,35 +369,43 @@ html.has-scroll-dragging {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #fff;
-    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
 }
 
-.backgroundContent .backgroundTitle span {
+.backgroundTitle span {
     position: relative;
     top: -30vw;
     opacity: 0;
 }
 
-.backgroundContent.t-1 {
+.backgroundContent .t-1 {
     clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
 }
 
-.backgroundTitle {
+/* .backgroundTitle{
+    width: 100%;
+    height: 100vh;
+} */
+
+.backgroundColor {
     position: absolute;
 
     -webkit-user-select: none;
     user-select: none;
 
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 1;
+}
+
+.backgroundTitle p,
+.backgroundTitle span {
+    animation: marquee 9s linear infinite;
     text-align: center;
     font-size: 24rem;
     font-weight: 100;
     text-transform: uppercase;
-    width: 100%;
     white-space: nowrap;
-    animation: marquee 9s linear infinite;
-
-    z-index: -1;
 }
 
 @keyframes marquee {
@@ -390,53 +434,73 @@ html.has-scroll-dragging {
     width: 25vw;
     height: 75vh;
     z-index: 3;
+    /* overflow: hidden; Volverlos a cambiar si da errores*/
 }
 
-
-.imageZone img {
-    transform: scale(1.2);
-    opacity: 0;
-}
-
-.imageContainer {
-    width: 100%;
-    height: 65vh;
-}
-
-.image {
-    position: absolute;
+.story-img {
     width: 100%;
     height: 65vh;
     overflow: hidden;
-    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0 100%);
 }
 
-.image#t-1 {
-    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+.img {
+    position: absolute;
+    top: 11px;
+    left: 0;
+    width: 100%;
+    height: 65vh;
+    overflow: hidden;
+}
+
+.desc-name {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.desc-name p{
+    font-size: 1.5rem;
+}
+
+.desc {
+    display: flex;
+    flex-direction: column;
 }
 
 .t-1 {
     background-color: #cbdcf6;
+    width: 100vw;
+    height: 100vh;
 }
 
 .t-2 {
     background-color: #ebd0ad;
+    width: 100vw;
+    height: 100vh;
 }
 
 .t-3 {
     background-color: #c7cfbf;
+    width: 100vw;
+    height: 100vh;
 }
 
 .t-4 {
     background-color: #c9a895;
+    width: 100vw;
+    height: 100vh;
 }
 
 .t-5 {
     background-color: #ac8c8c;
+    width: 100vw;
+    height: 100vh;
 }
 
 .t-6 {
     background-color: #8f8f8f;
+    width: 100vw;
+    height: 100vh;
 }
 
 .image .contacto {
@@ -487,9 +551,9 @@ html.has-scroll-dragging {
 }
 
 .info p {
-    opacity: 0;
+    /* opacity: 0;
     position: relative;
-    top: -10vh;
+    top: -10vh; */
 }
 
 .name {
@@ -517,11 +581,6 @@ html.has-scroll-dragging {
         height: 7dvh;
     }
 
-    .backgroundZone {
-        height: 100%;
-        z-index: 1;
-    }
-
     .imageZone {
         position: fixed;
         top: 0;
@@ -533,6 +592,27 @@ html.has-scroll-dragging {
         grid-template-rows: 7dvh 3dvh 1fr 3dvh 8dvh;
         grid-template-columns: 7vw 1fr 7vw;
         z-index: 2;
+    }
+    .indices{
+        grid-column: 2/3;
+        grid-row: 3/4;
+        width: 100%;
+    }
+
+    .story-img{
+        height: calc(100dvh - 14dvh - 20dvh);
+        width: calc(100vw - 14vw);
+        z-index: 1;
+        grid-column: 2/3;
+        grid-row: 3/4;
+        overflow: hidden;
+    }
+
+    .img{
+        grid-column: 2/3;
+        grid-row: 3/4;
+        height: calc(100dvh - 14dvh - 20dvh - 11px);
+        width: calc(100vw - 14vw);
     }
 
     .imageContainer {
@@ -556,21 +636,22 @@ html.has-scroll-dragging {
         height: 100%;
     }
 
-    .infoContainer {
+    .info {
         grid-column: 2/3;
         grid-row: 3/4;
         width: 100%;
         height: 100%;
         padding: 0;
+        gap: 0;
         z-index: 2;
         overflow: hidden;
 
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: calc(100dvh - 14dvh - 20dvh) 1rem 1fr;
+        grid-template-rows: calc(100dvh - 14dvh - 20dvh) .5rem 2rem .5rem 1fr;
     }
 
-    .info {
+    .desc-name {
         grid-column: 1/2;
         grid-row: 3/4;
         padding: 0;
@@ -578,28 +659,38 @@ html.has-scroll-dragging {
         justify-content: space-around;
     }
 
-    .backgroundContent {
+    .desc{
+        grid-column: 1/2;
+        grid-row: 5/6;
+        padding: 0;
+        gap: 0;
+        justify-content: space-around;
+    }
+
+    .t-1,
+    .t-2,
+    .t-3,
+    .t-4,
+    .t-5,
+    .t-6 {
         display: grid;
         grid-template-rows: 7dvh 3dvh 1fr 3dvh 8dvh;
         grid-template-columns: 1fr;
     }
 
     .backgroundTitle {
-        font-size: 3rem;
-        animation: none;
         grid-column: 1/2;
         grid-row: 5/6;
+    }
+
+    .backgroundTitle p,
+    .backgroundTitle span{
+        font-size: 3rem;
+        animation: none;
+
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-
-    #t-5,
-    #t-6 {
-        grid-row: 3/4;
-        grid-column: 2/3;
-        height: 100%;
-        width: 100%;
     }
 
     .image .contacto {

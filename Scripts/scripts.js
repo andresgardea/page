@@ -1,294 +1,489 @@
 /*----Pantalla de carga-----*/
 
 gsap.to("#loadingScreen", {
-    opacity: 1,
-    duration: .5,
+  opacity: 1,
+  duration: .5,
 });
 
 gsap.to(".Loader", {
-    opacity: 1,
-    duration: .2,
+  opacity: 1,
+  duration: .2,
 });
 
 
 gsap.to(".contain, .contain-2", {
-    opacity: 1,
-    duration: 0.1,
-    delay: 1
+  opacity: 1,
+  duration: 0.1,
+  delay: 1
 });
 
 gsap.to(".clickZone", {
-    pointerEvents: "auto",
-    duration: 0,
-    delay: 8.7
+  pointerEvents: "auto",
+  duration: 0,
+  delay: 8.7
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    splitTextIntoSpans(".loadingText p");
-    splitTextIntoSpans(".backgroundTitle");
+  splitTextIntoSpans(".loadingText p");
+  // splitTextIntoSpans(".backgroundTitle");
 
-    gsap.to(".Image-Holder img", {
-        left: 0,
-        stagger: 0.1,
-        ease: "power4.out",
-        duration: 1.5,
-        delay: 2.8,
-    });
+  gsap.to(".Image-Holder img", {
+    left: 0,
+    stagger: 0.1,
+    ease: "power4.out",
+    duration: 1.6,
+    delay: 2.8,
+  });
 
-    gsap.to(".Image-Holder img", {
-        left: "110%",
-        stagger: -0.1,
-        ease: "power4.out",
-        duration: 1.5,
-        delay: 7.2,
-    });
+  gsap.to(".Image-Holder img", {
+    left: "110%",
+    stagger: -0.1,
+    ease: "power4.out",
+    duration: 1.6,
+    delay: 7.1,
+  });
 });
 
 function splitTextIntoSpans(selector) {
-    var element = document.querySelector(selector);
-    if (element) {
-        var text = element.innerText;
-        var splitText = text
-            .split("")
-            .map((char) => `<span>${char}</span>`)
-            .join("");
-        element.innerHTML = splitText;
-    }
+  var element = document.querySelector(selector);
+  if (element) {
+    var text = element.innerText;
+    var splitText = text
+      .split("")
+      .map((char) => `<span>${char}</span>`)
+      .join("");
+    element.innerHTML = splitText;
+  }
 }
 
 function startLoader() {
-    var counterElement = document.querySelector(".counter p");
-    // var logoElement = document.querySelector(".loadingText p");
-    var currentValue = 0;
+  var counterElement = document.querySelector(".counter p");
+  var currentValue = 0;
 
-    function updatecounter() {
-        if (currentValue === 100) {
-            animateText();
-            return;
-        }
-
-        currentValue += Math.floor(Math.random() * 10) + 1;
-        currentValue = currentValue > 100 ? 100 : currentValue;
-        counterElement.innerHTML =
-            currentValue
-                .toString()
-                .split("")
-                .map((char) => `<span>${char}</span>`)
-                .join("") + "<span>%</span>";
-
-        var delay = Math.floor(Math.random() * 200) + 100;
-        setTimeout(updatecounter, delay);
+  function updatecounter() {
+    if (currentValue === 100) {
+      animateText();
+      return;
     }
 
-    function animateText() {
+    currentValue += Math.floor(Math.random() * 10) + 1;
+    currentValue = currentValue > 100 ? 100 : currentValue;
+    counterElement.innerHTML =
+      currentValue
+        .toString()
+        .split("")
+        .map((char) => `<span>${char}</span>`)
+        .join("") + "<span>%</span>";
 
-        setTimeout(() => {
+    var delay = Math.floor(Math.random() * 200) + 100;
+    setTimeout(updatecounter, delay);
+  }
 
-            gsap.to(".counter p span", {
-                top: "-400px",
-                stagger: 0.1,
-                ease: "power3.inOut",
-                duration: 1,
-            });
+  function animateText() {
 
-            gsap.to(".loadingText p span", {
-                top: "0",
-                stagger: 0.1,
-                ease: "power3.inOut",
-                duration: 1,
-            });
+    setTimeout(() => {
 
-            gsap.to(".loadingText p span", {
-                top: "-400px",
-                stagger: 0.1,
-                ease: "power3.inOut",
-                duration: 1,
-                delay: 3,
-            });
+      gsap.to(".counter p span", {
+        top: "-400px",
+        stagger: 0.1,
+        ease: "power3.inOut",
+        duration: 1.2,
+      });
 
-            gsap.to("#loadingScreen", {
-                opacity: 0,
-                ease: "power4.inOut",
-                // translateY: "101vh",
-                duration: 1,
-                delay: 4,
-            });
+      gsap.to(".loadingText p span", {
+        top: "0",
+        stagger: 0.1,
+        ease: "power3.inOut",
+        duration: 1.1,
+      });
+
+      gsap.to(".loadingText p span", {
+        top: "-300px",
+        opacity: 0,
+        stagger: 0.1,
+        ease: "power3.inOut",
+        duration: 1.2,
+        delay: 3.2,
+      });
+
+      gsap.to("#loadingScreen", {
+        opacity: 0,
+        ease: "power4.inOut",
+        // translateY: "101vh",
+        duration: 1.1,
+        delay: 4.2,
+      });
 
 
-            gsap.to(".imageZone img", {
-                scale: 1,
-                opacity: 1,
-                ease: "power3.inOut",
-                duration: 1,
-                delay: 4,
-            });
+      gsap.to(".imageZone img", {
+        scale: 1,
+        opacity: 1,
+        ease: "power3.inOut",
+        duration: 1.1,
+        delay: 4,
+      });
 
-            gsap.to(".backgroundContent .backgroundTitle span", {
-                top: "0",
-                opacity: 1,
-                stagger: 0.1,
-                ease: "power3.inOut",
-                duration: 1.2,
-                delay: 4,
-            });
+      // gsap.to(".backgroundContent .backgroundTitle span", {
+      //   top: "0",
+      //   opacity: 1,
+      //   stagger: 0.1,
+      //   ease: "power3.inOut",
+      //   duration: 1.2,
+      //   delay: 4,
+      // });
 
-            gsap.to(".nav-bar h2, .nav-bar .reloj", {
-                opacity: 1,
-                top: "0",
-                ease: "power3.inOut",
-                duration: 1.8,
-                delay: 4,
-                stagger: 0.2,
+      gsap.to(".nav-bar h2, .nav-bar .reloj", {
+        opacity: 1,
+        top: "0",
+        ease: "power3.inOut",
+        duration: 1.9,
+        delay: 4,
+        stagger: 0.2,
 
-            });
+      });
 
-            gsap.to(".info p, .menu__item", {
-                top: "0",
-                stagger: 0.2,
-                opacity: 1,
-                ease: "power3.inOut",
-                duration: 1.6,
-                delay: 4.1,
-            });
+      gsap.to(".info p, .menu__item", {
+        top: "0",
+        stagger: 0.2,
+        opacity: 1,
+        ease: "power3.inOut",
+        duration: 1.6,
+        delay: 4.1,
+      });
 
-            gsap.to(".clickZone", {
-                display: "block",
-                delay: 4,
-                duration: 0
-            });
+      gsap.to(".clickZone", {
+        delay: 4,
+        duration: 0
+      });
 
-        }, 300);
-    }
+    }, 300);
+  }
 
-    updatecounter();
+  updatecounter();
 }
 
 startLoader();
 
 /*-----Reloj-----*/
 var ChihuahuaTime = function () {
-    document.getElementById("time-text").innerHTML = new Date().toLocaleString("en-US", { timeZone: "America/Chihuahua", timeStyle: "medium" })
-  }
-  
-  ChihuahuaTime();
-  setInterval(ChihuahuaTime, 1000);
+  document.getElementById("time-text").innerHTML = new Date().toLocaleString("en-US", { timeZone: "America/Chihuahua", timeStyle: "medium" })
+}
+
+ChihuahuaTime();
+setInterval(ChihuahuaTime, 1000);
 
 /*-----Cambio de Seccion-----*/
-const activity = [
-    { name: "Andrés Gardea", desc: "Soy un Fotógrafo y Diseñador Gráfico de la ciudad de Chihuahua México." },
-    { name: "Fotógrafo", desc: "Me apasiona la fotografía de naturaleza y me especializo en fotografía de productos y retratos." },
-    { name: "Diseñador", desc: "Estudio Diseño y Comunicación Gráfica, realizo trabajos de diseño tanto digital como tradicional." },
-    { name: "Programador", desc: "He trabajado desarrollando y lanzando páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio." },
-    { name: "", desc: "" },
-    { name: "", desc: "" },
 
+const stories = [
+  {
+    profileName: "Andrés Gardea",
+    title: [
+      "Andrés Gardea",
+    ],
+    descLabel: "Soy un Fotógrafo y Diseñador Gráfico de la ciudad de Chihuahua México.",
+    descSrc: "behance.net",
+    storyImg: "../Media/000.webp",
+    backgroundClass: "t-1",
+
+  },
+  {
+    profileName: "Fotógrafo",
+    title: ["Fotógrafo"],
+    descLabel: "Me apasiona la fotografía de naturaleza y me especializo en fotografía de productos y retratos.",
+    descSrc: "dribbble.com",
+    storyImg: "../Media/2.webp",
+    backgroundClass: "t-2",
+  },
+  {
+    profileName: "Diseñador",
+    title: ["Diseñador"],
+    descLabel: "Estudio Diseño y Comunicación Gráfica, realizo trabajos de diseño tanto digital como tradicional.",
+    descSrc: "awwwards.com",
+    storyImg: "../Media/3.webp",
+    backgroundClass: "t-3",
+  },
+  {
+    profileName: "Programador",
+    title: ["Programador"],
+    descLabel: "He trabajado desarrollando y lanzando páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio.",
+    descSrc: "adobe.com",
+    storyImg: "../Media/4.webp",
+    backgroundClass: "t-4",
+  },
+  {
+    profileName: "Servicios",
+    title: ["Servicios"],
+    descLabel: "He trabajado desarrollando y lanzando páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio.",
+    descSrc: "adobe.com",
+    storyImg: "../Media/5.webp",
+    backgroundClass: "t-5",
+  },
+  {
+    profileName: "Contacto",
+    title: ["Contacto"],
+    descLabel: "He trabajado desarrollando y lanzando páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio.",
+    descSrc: "adobe.com",
+    storyImg: "../Media/6.webp",
+    backgroundClass: "t-6",
+  }
 ];
 
-const cursor = document.querySelector('.cursor');
+let activeStory = -1; //Sepa la v porque funciona xD
+const storyDuration = 7750;
+let direction = "next";
+let storyTimeout;
+
+/*-----Barra de Progreso-----*/
+function resetIndexHighlight(index, currentDirection) {
+  const highlight = document.querySelectorAll(".index .index-highlight")[index];
+  gsap.killTweensOf(highlight);
+  gsap.to(highlight, {
+    width: currentDirection === "next" ? "100%" : "0%",
+    duration: 0.3,
+    onStart: () => {
+      gsap.to(highlight, {
+        transformOrigin: "right center",
+        scaleX: 0,
+        duration: 0.3,
+      });
+    },
+  });
+}
+
+function animateIndexHighlight(index) {
+  const highlight = document.querySelectorAll(".index .index-highlight")[index];
+  gsap.set(highlight, {
+    width: "0%",
+    scaleX: 1,
+    transformOrigin: "right center",
+  });
+  gsap.to(highlight, {
+    width: "100%",
+    duration: storyDuration / 1000,
+    ease: "none",
+  });
+}
+
+/*Camio de Imagen*/
+function animateNewImage(imgContainer, currentDirection) {
+
+  if (currentDirection === "next") {
+    gsap.set(imgContainer, {
+      clipPath:
+        currentDirection === "next"
+          ? 'polygon(0% 100%, 100% 100%, 100% 100%, 0 100%)'
+          : 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+    });
+
+    gsap.to(imgContainer, {
+      clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+      duration: 1,
+      ease: "power4.out",
+    });
+
+  } else {
+    gsap.set(imgContainer, {
+      clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)',
+    });
+
+    gsap.to(imgContainer, {
+      clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+      duration: 1,
+      ease: "power4.out",
+    });
+  }
+}
+
+function animateImageScale(currentImg, upcomingImg) {
+  gsap.fromTo(
+    currentImg,
+    { scale: 1, rotate: 0 },
+    {
+      scale: 1.1,
+      duration: .8,
+      ease: "power4.inOut",
+      onComplete: () => {
+        currentImg.parentElement.remove();
+      },
+    }
+  );
+  gsap.fromTo(
+    upcomingImg,
+    {
+      scale: 1.1
+    },
+    { scale: 1, duration: .2, ease: "power4.inOut" }
+  );
+}
+/*----Zona de Cambio del Background-----*/
+function animateNewBackground(currentBackgroundContent, currentDirection) {
+  if (currentDirection === "next") {
+    gsap.set(currentBackgroundContent, {
+      clipPath:
+        currentDirection === "next"
+          ? 'polygon(0% 100%, 100% 100%, 100% 100%, 0 100%)'
+          : 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+    });
+
+    gsap.to(currentBackgroundContent, {
+      clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+      duration: 1,
+      ease: "power4.out",
+    });
+
+  } else {
+    gsap.set(currentBackgroundContent, {
+      clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)',
+    });
+
+    gsap.to(currentBackgroundContent, {
+      clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+      duration: 1,
+      ease: "power4.out",
+      delay: 0.3
+    });
+  }
+
+}
+
+/*Eliminar elementos al cambiar de pagina*/
+function cleanUpElements() {
+  const profileNameDiv = document.querySelector(".desc-name");
+  const backgroundTitle = document.querySelector(".backgroundTitle");
+  const image = document.querySelector(".story-img");
+  const background = document.querySelector(".backgroundColor");
+
+
+  while (profileNameDiv.childElementCount > 1) {
+    profileNameDiv.removeChild(profileNameDiv.firstChild);
+  }
+
+  while (image.childElementCount > 2) {
+    image.removeChild(image.firstChild);
+  }
+
+  while (background.childElementCount > 4) {
+    background.removeChild(background.firstChild);
+  }
+
+  while (backgroundTitle.childElementCount > 1) {
+    backgroundTitle.removeChild(backgroundTitle.firstChild);
+  }
+
+}
+
+function changeStory(isAutomatic = true) {
+  const previousStory = activeStory;
+  const currentDirection = isAutomatic ? "next" : direction;
+
+  if (currentDirection === "next") {
+    activeStory = (activeStory + 1) % stories.length;
+  } else {
+    activeStory = (activeStory - 1 + stories.length) % stories.length;
+  }
+
+  const story = stories[activeStory];
+
+  const currentImgContainer = document.querySelector(".story-img .img");
+  const currentImg = currentImgContainer.querySelector("img");
+
+  const currentBackgroundContent = document.querySelector(".backgroundContent");
+
+  setTimeout(() => {
+    const newProfileName = document.createElement("p");
+    newProfileName.innerText = story.profileName;
+
+    const profileNameDiv = document.querySelector(".desc-name");
+    profileNameDiv.appendChild(newProfileName);
+
+
+    //Cosas de las Imagenes
+    const newImgContainer = document.createElement("div");
+    newImgContainer.classList.add("img");
+    const newStoryImg = document.createElement("img");
+    newStoryImg.src = story.storyImg;
+    newStoryImg.alt = story.profileName;
+    newImgContainer.appendChild(newStoryImg);
+
+    const storyImgDiv = document.querySelector(".story-img");
+    storyImgDiv.appendChild(newImgContainer);
+
+    animateNewImage(newImgContainer, currentDirection);
+
+    const upcomingImg = newStoryImg;
+    animateImageScale(currentImg, upcomingImg, currentDirection);
+
+    //Cosas del Background
+    const backgroundContainer = document.createElement("div");
+    backgroundContainer.classList.add("backgroundContent");
+    const newBackground = document.createElement("div");
+    newBackground.className = story.backgroundClass;
+    backgroundContainer.appendChild(newBackground);
+    const newBackgroundTitle = document.createElement("div");
+    newBackgroundTitle.classList.add("backgroundTitle");
+    newBackground.appendChild(newBackgroundTitle);
+    const newTitle = document.createElement("p");
+    newTitle.innerText = story.title;
+    newBackgroundTitle.appendChild(newTitle);
+
+
+    const backgroundDiv = document.querySelector(".backgroundColor");
+    backgroundDiv.appendChild(backgroundContainer);
+
+    animateNewBackground(backgroundContainer, currentDirection);
+
+    const upcomingBackground = newBackground;
+    animateNewBackground(currentBackgroundContent, upcomingBackground, currentDirection);
+
+    resetIndexHighlight(previousStory, currentDirection);
+    animateIndexHighlight(activeStory);
+
+    cleanUpElements();
+
+    clearTimeout(storyTimeout);
+    storyTimeout = setTimeout(() => changeStory(true), storyDuration);
+  }, 200);
+
+  setTimeout(() => {
+    const desc = document.querySelector(".desc p");
+    desc.textContent = story.descLabel;
+    desc.href = story.descSrc;
+  }, 200);
+
+}
+
+/*-----Cursor-----*/
+const cursor = document.querySelector(".cursor");
 const cursorIcon = cursor.querySelector('i');
 
-const cursorWidth = cursor.offsetWidth / 2;
-const cursorHeight = cursor.offsetHeight / 2;
+document.addEventListener("mousemove", (event) => {
+  const { clientX, clientY } = event;
+  gsap.to(cursor, {
+    x: clientX - cursor.offsetWidth / 2,
+    y: clientY - cursor.offsetHeight / 2,
+    ease: "power2.out",
+    duration: 0.3,
+  });
 
-let currentSlide = 1;
-const totalSlides = 6;
-
-const updateCursorClass = (xPosition) => {
-    const halfPageWidth = window.innerWidth / 2;
-
-    if (xPosition > halfPageWidth) {
-        if (currentSlide < totalSlides) {
-            cursorIcon.classList.remove('ph-arrow-left');
-            cursorIcon.classList.add('ph-arrow-right');
-            cursor.style.display = '';
-        }
-        else {
-            cursor.style.display = 'none';
-        }
-    }
-    else {
-        if (currentSlide > 1) {
-            cursorIcon.classList.remove('ph-arrow-right');
-            cursorIcon.classList.add('ph-arrow-left');
-            cursor.style.display = '';
-        } else {
-            cursor.style.display = 'none';
-
-        }
-    }
-}
-
-document.addEventListener('mousemove', (e) => {
-    gsap.to(cursor, {
-        x: e.clientX - cursorWidth,
-        y: e.clientY - cursorHeight,
-        duration: .5,
-        ease: "power3.out"
-    });
-
-    updateCursorClass(e.clientX);
+  const viewportWidth = window.innerWidth;
+  if (clientX < viewportWidth / 2) {
+    cursorIcon.classList.remove('ph-arrow-right');
+    cursorIcon.classList.add('ph-arrow-left');
+    cursor.style.display = '';
+    direction = "prev";
+  } else {
+    cursorIcon.classList.remove('ph-arrow-left');
+    cursorIcon.classList.add('ph-arrow-right');
+    cursor.style.display = '';
+    direction = "next";
+  }
 });
 
-const updateInfo = (slideNumber) => {
-    const work = activity[slideNumber - 1];
-    document.querySelector('.info .name').textContent = work.name;
-    document.querySelector('.info .desc').textContent = work.desc;
-};
-
-const animateSlide = (slideNumber, reveal) => {
-    const marquee = document.querySelector(`.t-${slideNumber}.backgroundContent`);
-    const img = document.getElementById(`t-${slideNumber}`);
-    const clipPathValue = reveal ? 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)' : 'polygon(0% 100%, 100% 100%, 100% 100%, 0 100%)';
-
-    gsap.to(marquee, { clipPath: clipPathValue, duration: 1, ease: "power4.out", delay: 0.3 });
-    gsap.to(img, { clipPath: clipPathValue, duration: 1, ease: "power4.out" });
-};
-
-updateInfo(currentSlide);
-
-/*-----Click-----*/
-
-const handleRightclick = () => {
-    if (currentSlide < totalSlides) {
-        animateSlide(currentSlide + 1, true);
-        currentSlide++;
-        updateInfo(currentSlide);
-    }
-}
-
-const handleLeftclick = () => {
-    if (currentSlide > 1) {
-        animateSlide(currentSlide, false);
-        currentSlide--;
-        updateInfo(currentSlide);
-    }
-}
-
-const clickZone = document.querySelector('.clickZone');
-
-
-clickZone.addEventListener('click', (e) => {
-    const halfPageWidth = window.innerWidth / 2;
-    if (e.clientX > halfPageWidth) {
-        handleRightclick();
-    }
-    else {
-        handleLeftclick();
-    }
+document.addEventListener("click", () => {
+  clearTimeout(storyTimeout);
+  resetIndexHighlight(activeStory, direction);
+  changeStory(false);
 });
 
-if (window.screen.width <= 600) {
-    document.addEventListener('click', (e) => {
-        const halfPageWidth = window.innerWidth / 2;
-        if (e.clientX > halfPageWidth) {
-            handleRightclick();
-        }
-        else {
-            handleLeftclick();
-        }
-    });
-}
-
-/*
-setInterval(handleRightclick, 9000);
-*/
+storyTimeout = setTimeout(() => changeStory(true), storyDuration);
+animateIndexHighlight(activeStory);
