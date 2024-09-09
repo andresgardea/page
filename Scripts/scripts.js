@@ -177,54 +177,52 @@ setInterval(ChihuahuaTime, 1000);
 const stories = [
   {
     profileName: "Andrés Gardea",
-    title: [
+    backgroundTitle: [
       "Andrés Gardea",
     ],
-    descLabel: "Soy un Fotógrafo y Diseñador Gráfico de la ciudad de Chihuahua México.",
-    descSrc: "behance.net",
+    descText: "Soy un Fotógrafo y Diseñador Gráfico de la ciudad de Chihuahua México.",
     storyImg: "../Media/000.webp",
     backgroundClass: "t-1",
-
   },
   {
     profileName: "Fotógrafo",
-    title: ["Fotógrafo"],
-    descLabel: "Me apasiona la fotografía de naturaleza y me especializo en fotografía de productos y retratos.",
-    descSrc: "dribbble.com",
-    storyImg: "../Media/2.webp",
+    backgroundTitle: ["Fotógrafo"],
+    descText: "Me apasiona la fotografía de naturaleza y me especializo en fotografía de productos y retratos.",
+    storyImg: "../Media/Servicios/Gastronomica-7.webp",
     backgroundClass: "t-2",
+    linkSrc: "../photo.html",
   },
   {
     profileName: "Diseñador",
-    title: ["Diseñador"],
-    descLabel: "Estudio Diseño y Comunicación Gráfica, realizo trabajos de diseño tanto digital como tradicional.",
-    descSrc: "awwwards.com",
-    storyImg: "../Media/3.webp",
+    backgroundTitle: ["Diseñador"],
+    descText: "Estudio Diseño y Comunicación Gráfica, realizo trabajos de diseño tanto digital como tradicional.",
+    storyImg: "../Media/Poster/Poster-001.webp",
     backgroundClass: "t-3",
+    linkSrc: "../design.html",
   },
   {
     profileName: "Programador",
-    title: ["Programador"],
-    descLabel: "He trabajado desarrollando y lanzando páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio.",
-    descSrc: "adobe.com",
+    backgroundTitle: ["Programador"],
+    descText: "He trabajado desarrollando y lanzando páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio.",
     storyImg: "../Media/4.webp",
     backgroundClass: "t-4",
+    linkSrc: "../photo.html",
   },
   {
     profileName: "Servicios",
-    title: ["Servicios"],
-    descLabel: "He trabajado desarrollando y lanzando páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio.",
-    descSrc: "adobe.com",
+    backgroundTitle: ["Servicios"],
+    descText: "He trabajado desarrollando y lanzando páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio.",
     storyImg: "../Media/5.webp",
     backgroundClass: "t-5",
+    linkSrc: "../servicios.html",
   },
   {
     profileName: "Contacto",
-    title: ["Contacto"],
-    descLabel: "He trabajado desarrollando y lanzando páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio.",
-    descSrc: "adobe.com",
+    backgroundTitle: ["Contacto"],
+    descText: "He trabajado desarrollando y lanzando páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio.",
     storyImg: "../Media/6.webp",
     backgroundClass: "t-6",
+    linkSrc: "../photo.html",
   }
 ];
 
@@ -390,12 +388,13 @@ function changeStory(isAutomatic = true) {
   const currentBackgroundContent = document.querySelector(".backgroundContent");
 
   setTimeout(() => {
-    const newProfileName = document.createElement("p");
+    const newProfileName = document.createElement("a");
     newProfileName.innerText = story.profileName;
+    newProfileName.href = story.linkSrc;
+
 
     const profileNameDiv = document.querySelector(".desc-name");
     profileNameDiv.appendChild(newProfileName);
-
 
     //Cosas de las Imagenes
     const newImgContainer = document.createElement("div");
@@ -423,7 +422,7 @@ function changeStory(isAutomatic = true) {
     newBackgroundTitle.classList.add("backgroundTitle");
     newBackground.appendChild(newBackgroundTitle);
     const newTitle = document.createElement("p");
-    newTitle.innerText = story.title;
+    newTitle.innerText = story.backgroundTitle;
     newBackgroundTitle.appendChild(newTitle);
 
 
@@ -445,9 +444,9 @@ function changeStory(isAutomatic = true) {
   }, 200);
 
   setTimeout(() => {
-    const desc = document.querySelector(".desc p");
-    desc.textContent = story.descLabel;
-    desc.href = story.descSrc;
+    // const desc = document.querySelector(".desc p");
+    // desc.textContent = story.descText;
+    // desc.href = story.descSrc;
   }, 200);
 
 }

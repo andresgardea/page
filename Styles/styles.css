@@ -274,7 +274,7 @@ html.has-scroll-dragging {
     color: #1c1c1e;
 }
 
-/*Barra de Navegacion*/
+/*Barra de Navegación*/
 .nav-bar {
     position: fixed;
     top: 0;
@@ -458,8 +458,10 @@ html.has-scroll-dragging {
     height: auto;
 }
 
-.desc-name p{
-    font-size: 1.5rem;
+.desc-name p,
+.desc-name a{
+    color: #1c1c1e;
+    font-size: 1.5rem;    
 }
 
 .desc {
@@ -550,11 +552,11 @@ html.has-scroll-dragging {
     flex-direction: column;
 }
 
-.info p {
-    /* opacity: 0;
+/* .info p {
+    opacity: 0;
     position: relative;
-    top: -10vh; */
-}
+    top: -10vh;
+} */
 
 .name {
     font-size: 1.5rem;
