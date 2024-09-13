@@ -963,10 +963,14 @@ html.has-scroll-dragging {
         padding: 0;
     }
 
-    .img-modal .img {
-        top: 43dvh;
-        height: calc(100dvh - 14dvh - 20dvh);
-        width: calc(100% - 14vw);
+    .img-modal .img-container {
+        width: 100%;
+        height: 100%;
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: calc(100dvh - 14dvh - 20dvh) 1rem 1fr 1rem;
     }
 
     .img-name {
@@ -1000,6 +1004,10 @@ html.has-scroll-dragging {
 
     .close-btn p {
         font-size: 1.4rem;
+    }
+
+    .resource{
+        margin: 10px 0;
     }
 }
 
