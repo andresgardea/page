@@ -843,7 +843,6 @@ html.has-scroll-dragging {
 
 .gallery-container-2 .gallery-item {
     height: 45vh;
-
 }
 
 .gallery-item {
@@ -950,6 +949,10 @@ html.has-scroll-dragging {
     .gallery-container {
         flex-direction: column;
         align-items: center;
+    }
+
+    .gallery-container-2 .gallery-item {
+        height: 60vh;
     }
 
     .gallery-item {
