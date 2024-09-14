@@ -993,13 +993,13 @@ html.has-scroll-dragging {
     }
 
     .close-btn {
-        grid-row: 5/6;
+        grid-row: 4/6;
         grid-column: 2/3;
         justify-content: center;
         text-align: center;
         width: 100%;
         height: 100%;
-        padding: 1rem;
+        padding: .1rem;
     }
 
     .close-btn p {
