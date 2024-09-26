@@ -188,7 +188,7 @@ const stories = [
     profileName: "Fotógrafo",
     backgroundTitle: ["Fotógrafo"],
     descText: "Me apasiona la fotografía de naturaleza y me especializo en fotografía de productos y retratos.",
-    storyImg: "../Media/Servicios/Gastronomica-7.webp",
+    storyImg: "../Media/Servicios/Producto-4.webp",
     backgroundClass: "t-2",
     linkSrc: "../photo.html",
   },
