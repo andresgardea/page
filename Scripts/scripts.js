@@ -444,9 +444,9 @@ function changeStory(isAutomatic = true) {
   }, 200);
 
   setTimeout(() => {
-    // const desc = document.querySelector(".desc p");
-    // desc.textContent = story.descText;
-    // desc.href = story.descSrc;
+    const desc = document.querySelector(".desc p");
+    desc.textContent = story.descText;
+    desc.href = story.descSrc;
   }, 200);
 
 }
