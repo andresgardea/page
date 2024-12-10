@@ -196,7 +196,7 @@ const stories = [
     profileName: "Diseñador",
     backgroundTitle: ["Diseñador"],
     descText: "Estudio Diseño y Comunicación Gráfica, realizo trabajos de diseño tanto digital como tradicional.",
-    storyImg: "../Media/Poster/Poster-001.webp",
+    storyImg: "../Media/Poster/Poster-005.webp",
     backgroundClass: "t-3",
     linkSrc: "../design.html",
   },
