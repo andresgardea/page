@@ -1,0 +1,3 @@
+User-agent: Googlebot-Image
+
+Disallow: Media/Poster/Poster-002.webp

@@ -132,7 +132,7 @@ function startLoader() {
       //   delay: 4,
       // });
 
-      gsap.to(".nav-bar h2, .nav-bar .reloj", {
+      gsap.to(".nav-bar h1, .nav-bar .reloj", {
         opacity: 1,
         top: "0",
         ease: "power3.inOut",
