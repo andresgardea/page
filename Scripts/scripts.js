@@ -132,7 +132,7 @@ function startLoader() {
       //   delay: 4,
       // });
 
-      gsap.to(".nav-bar h1, .nav-bar .reloj", {
+      gsap.to(".nav-bar h1, .nav-bar h2, .nav-bar .reloj", {
         opacity: 1,
         top: "0",
         ease: "power3.inOut",
@@ -203,15 +203,15 @@ const stories = [
   {
     profileName: "Programador",
     backgroundTitle: ["Programador"],
-    descText: "He trabajado desarrollando y lanzando páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio.",
-    storyImg: "../Media/4.webp",
+    descText: "He trabajado desarrollando y publicando páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio.",
+    storyImg: "../Media/Developer/Developer-1.webp",
     backgroundClass: "t-4",
-    linkSrc: "../photo.html",
+    linkSrc: "../develloper.html",
   },
   {
     profileName: "Servicios",
     backgroundTitle: ["Servicios"],
-    descText: "He trabajado desarrollando y lanzando páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio.",
+    descText: "Conoce los servicios que ofrezco, desde sesiones fotográficas hasta planes diseño tradicional y digital.",
     storyImg: "../Media/5.webp",
     backgroundClass: "t-5",
     linkSrc: "../servicios.html",
