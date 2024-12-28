@@ -23,12 +23,6 @@ html {
     font-size: 12px;
 }
 
-@media (max-width: 8.5in) {
-    :root {
-        font-size: 18px;
-    }
-}
-
 @media (max-width: 5.5in) {
     :root {
         font-size: 11px;
@@ -145,7 +139,7 @@ html.has-scroll-dragging {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 110dvh;
     background-color: #080808;
     color: #ffffff;
     pointer-events: none;
@@ -160,21 +154,18 @@ html.has-scroll-dragging {
 .Loader {
     position: relative;
     width: 50vw;
-    height: 100%;
+    height: 100dvh;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* Loader */
 
 .loaderImgContainer {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 25vw;
-    height: 75vh;
+    height: auto;
     z-index: 2;
 }
 
@@ -182,7 +173,6 @@ html.has-scroll-dragging {
     position: relative;
     width: 100%;
     height: 65vh;
-    margin: 10px auto;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 
     display: flex;
@@ -197,7 +187,7 @@ html.has-scroll-dragging {
 
 .loadingInfo {
     width: 100%;
-    height: 25vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -338,10 +328,14 @@ html.has-scroll-dragging {
 
 .contain {
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    height: 100dvh;
+    /* overflow: hidden; */
     opacity: 0;
     color: #1c1c1e;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
 }
 
 .contain-2 {
@@ -368,7 +362,7 @@ html.has-scroll-dragging {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 133dvh;
 }
 
 .backgroundTitle span {
@@ -428,9 +422,9 @@ html.has-scroll-dragging {
 
 .imageZone {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* top: 50dvh; */
+    /* left: 50dvw; */
+    /* transform: translate(-50%, -50%); */
     width: 25vw;
     height: 75vh;
     z-index: 3;
@@ -459,13 +453,13 @@ html.has-scroll-dragging {
 }
 
 .desc-name p,
-.desc-name a{
+.desc-name a {
     color: #1c1c1e;
-    font-size: 1.5rem;    
+    font-size: 1.5rem;
 }
 
-.desc-name a{
-    border-bottom: 1px solid; 
+.desc-name a {
+    border-bottom: 1px solid;
     padding-bottom: .1em;
 }
 
@@ -477,37 +471,37 @@ html.has-scroll-dragging {
 .t-1 {
     background-color: #ebd0ad;
     width: 100vw;
-    height: 100vh;
+    height: 133dvh;
 }
 
 .t-2 {
     background-color: #cbdcf6;
     width: 100vw;
-    height: 100vh;
+    height: 133dvh;
 }
 
 .t-3 {
     background-color: #c7cfbf;
     width: 100vw;
-    height: 100vh;
+    height: 133dvh;
 }
 
 .t-4 {
     background-color: #c9a895;
     width: 100vw;
-    height: 100vh;
+    height: 133dvh;
 }
 
 .t-5 {
     background-color: #ac8c8c;
     width: 100vw;
-    height: 100vh;
+    height: 133dvh;
 }
 
 .t-6 {
     background-color: #8f8f8f;
     width: 100vw;
-    height: 100vh;
+    height: 133dvh;
 }
 
 .image .contacto {
@@ -600,13 +594,14 @@ html.has-scroll-dragging {
         grid-template-columns: 7vw 1fr 7vw;
         z-index: 2;
     }
-    .indices{
+
+    .indices {
         grid-column: 2/3;
         grid-row: 3/4;
         width: 100%;
     }
 
-    .story-img{
+    .story-img {
         height: calc(100dvh - 14dvh - 20dvh);
         width: calc(100vw - 14vw);
         z-index: 1;
@@ -615,7 +610,7 @@ html.has-scroll-dragging {
         overflow: hidden;
     }
 
-    .img{
+    .img {
         grid-column: 2/3;
         grid-row: 3/4;
         height: calc(100dvh - 14dvh - 20dvh - 11px);
@@ -666,7 +661,7 @@ html.has-scroll-dragging {
         justify-content: space-around;
     }
 
-    .desc{
+    .desc {
         grid-column: 1/2;
         grid-row: 5/6;
         padding: 0;
@@ -680,9 +675,14 @@ html.has-scroll-dragging {
     .t-4,
     .t-5,
     .t-6 {
+        height: 120dvh;
         display: grid;
-        grid-template-rows: 7dvh 3dvh 1fr 3dvh 8dvh;
+        grid-template-rows: 7dvh 3dvh 1fr 3dvh 8dvh 20dvh;
         grid-template-columns: 1fr;
+    }
+
+    .backgroundZone{
+        height: 100dvh;
     }
 
     .backgroundTitle {
@@ -691,7 +691,7 @@ html.has-scroll-dragging {
     }
 
     .backgroundTitle p,
-    .backgroundTitle span{
+    .backgroundTitle span {
         font-size: 3rem;
         animation: none;
 
@@ -817,11 +817,16 @@ html.has-scroll-dragging {
         font-size: 1.2rem;
     }
 }
-
-/* Pagina de Foto */
-.poster-page {
+/*-----Paginas Secundarias-----*/
+.contain-2{
     color: #ffffff;
 }
+.contain-2 .nav-bar {
+    /* mix-blend-mode: difference; */
+    background-color: #1c1c1e;
+}
+
+/* Pagina de Foto */
 
 .poster-container {
     display: grid;
@@ -889,12 +894,14 @@ html.has-scroll-dragging {
     position: fixed;
     top: 0;
     width: 100vw;
-    height: 100vh;
+    height: 105dvh;
     background: #090909;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
     padding: 6em 0;
     pointer-events: none;
     z-index: 11;
@@ -902,14 +909,9 @@ html.has-scroll-dragging {
 }
 
 .img-modal .img-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 75vh;
+    height: 66vh;
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-    display: flex;
-    justify-content: center;
+    padding: 1.5rem;
 }
 
 .img-modal .img-container img {
@@ -971,7 +973,7 @@ html.has-scroll-dragging {
     }
 
     .img-modal .img-container {
-        width: 100%;
+        width: 100vw;
         height: 100%;
         grid-column: 2 / 3;
         grid-row: 3 / 4;
@@ -980,8 +982,12 @@ html.has-scroll-dragging {
         grid-template-rows: calc(100dvh - 14dvh - 20dvh) 1rem 1fr 1rem;
     }
 
-    .img-name {
+    .img-modal .img-container img {
         width: 100%;
+    }
+
+    .img-name {
+        width: 100vw;
         height: 100%;
         grid-column: 2/3;
         grid-row: 3/4;
@@ -995,8 +1001,10 @@ html.has-scroll-dragging {
         grid-row: 3/4;
         padding: 0;
         gap: 0;
+        padding: 1.5rem;
         margin-top: 2rem;
         justify-content: space-around;
+        text-align: center;
     }
 
     .close-btn {
@@ -1013,20 +1021,9 @@ html.has-scroll-dragging {
         font-size: 1.4rem;
     }
 
-    .resource{
+    .resource {
         margin: 10px 0;
     }
-}
-
-/* Pagina Redes */
-
-.redes-page {
-    color: #ffffff;
-}
-
-.redes-page .nav-bar {
-    /* mix-blend-mode: difference; */
-    background-color: #1c1c1e;
 }
 
 .redes-container {

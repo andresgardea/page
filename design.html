@@ -41,7 +41,7 @@
     </script>
 </head>
 
-<body class="poster-page">
+<body class="poster-page" data-scroll-container>
 
     <section id="loadingScreen">
         <div class="Loader">
@@ -72,13 +72,13 @@
         </div>
     </section>
 
-    <section class="contain-2">
-        <nav class="nav-bar">
+    <div class="contain-2">
+        <nav class="nav-bar" data-scroll-section-id="header" data-scroll-sticky data-scroll-target="#contain">
             <h2 class="logo">Andres Gardea</h2>
             <p id="time-text" class="reloj"></p>
         </nav>
 
-        <div class="poster-container">
+        <section class="poster-container" id="contain" data-scroll-section data-scroll-section-id="contain">
             <h1 class="container-title">By: Andres Gardea</h1>
 
             <div class="gallery-container">
@@ -158,7 +158,14 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <footer class="redes-footer" data-scroll-section data-scroll-section-id="footer">
+            <div class="footer-text">
+                <p>Fotografías tomadas por <a href="https://andresgardea.github.io/page/index.html"
+                        target="_blank">@Andres Gardea</a></p>
+            </div>
+        </footer>
 
         <div class="img-modal">
             <div class="img-name modal-item">
@@ -171,17 +178,27 @@
                 <p>close</p>
             </div>
         </div>
-    </section>
-
-    <footer class="redes-footer" data-scroll-section data-scroll-section-id="footer">
-        <div class="footer-text">
-            <p>Fotografías tomadas por <a href="https://andresgardea.github.io/page/index.html"
-                    target="_blank">@Andres Gardea</a></p>
-        </div>
-    </footer>
+    </div>
 
     <script src="Scripts/scripts.min.js"></script>
+    <script src="Scripts/locomotive-scroll.min.js"></script>
     <script>
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            multmultiplier: 1,
+            smooth: true,
+            mobile: {
+                breakpoint: 0,
+                smooth: false,
+            },
+            tablet: {
+                breakpoint: 0,
+                smooth: false,
+            },
+        });
+
+        setTimeout(function () { scroll.update(); console.log('update scroller') }, 5000);
+
         const tl = gsap.timeline({ paused: true });
         const clickZone2 = document.querySelectorAll('.gallery-item');
         const imgInfo = document.querySelectorAll('.img-info');
