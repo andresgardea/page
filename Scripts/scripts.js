@@ -220,7 +220,7 @@ const stories = [
     profileName: "Contacto",
     backgroundTitle: ["Contacto"],
     descText: "He trabajado desarrollando y lanzando páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio.",
-    storyImg: "../Media/6.webp",
+    storyImg: "../Media/3.webp",
     backgroundClass: "t-6",
     linkSrc: "../photo.html",
   }

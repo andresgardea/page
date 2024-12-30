@@ -1004,7 +1004,7 @@ html.has-scroll-dragging {
         padding: 1.5rem;
         margin-top: 2rem;
         justify-content: space-around;
-        text-align: center;
+        text-align: justify;
     }
 
     .close-btn {
