@@ -11,7 +11,7 @@ gsap.to(".Loader", {
 });
 
 
-gsap.to(".contain, .contain-2", {
+gsap.to(".contain, .page-container", {
   opacity: 1,
   duration: 0.1,
   delay: 1
@@ -142,14 +142,14 @@ function startLoader() {
 
       });
 
-      gsap.to(".info p, .menu__item", {
-        top: "0",
-        stagger: 0.2,
-        opacity: 1,
-        ease: "power3.inOut",
-        duration: 1.6,
-        delay: 4.1,
-      });
+      // gsap.to(".info p, .menu__item", {
+      //   top: "0",
+      //   stagger: 0.2,
+      //   opacity: 1,
+      //   ease: "power3.inOut",
+      //   duration: 1.6,
+      //   delay: 4.1,
+      // });
 
       gsap.to(".clickZone", {
         delay: 4,

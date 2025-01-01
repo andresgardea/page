@@ -41,7 +41,7 @@
     </script>
 </head>
 
-<body class="poster-page" data-scroll-container>
+<body data-scroll-container>
 
     <section id="loadingScreen">
         <div class="Loader">
@@ -72,16 +72,16 @@
         </div>
     </section>
 
-    <div class="contain-2">
+    <div class="page-container">
         <nav class="nav-bar" data-scroll-section-id="header" data-scroll-sticky data-scroll-target="#contain">
             <h2 class="logo">Andres Gardea</h2>
             <p id="time-text" class="reloj"></p>
         </nav>
 
-        <section class="poster-container" id="contain" data-scroll-section data-scroll-section-id="contain">
-            <h1 class="container-title">By: Andres Gardea</h1>
+        <section id="contain" data-scroll-section data-scroll-section-id="contain">
+            <div class="contain-section gallery">
+                <h1 class="container-title">By: Andres Gardea</h1>
 
-            <div class="gallery-container">
                 <div class="gallery-item">
                     <div class="item-img">
                         <img class="img-info" src="Media/Poster/Poster-001.webp"
@@ -160,7 +160,7 @@
             </div>
         </section>
 
-        <footer class="redes-footer" data-scroll-section data-scroll-section-id="footer">
+        <footer class="footer-section" data-scroll-section data-scroll-section-id="footer">
             <div class="footer-text">
                 <p>Fotografías tomadas por <a href="https://andresgardea.github.io/page/index.html"
                         target="_blank">@Andres Gardea</a></p>
@@ -231,7 +231,7 @@
                 pointerEvents: "auto",
             });
 
-            tl.to(".gallery-container, .container", 0.01, {
+            tl.to(".contain-section, .container", 0.01, {
                 pointerEvents: "none",
             });
 

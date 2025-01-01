@@ -33,7 +33,8 @@ h1 {
     font-size: 3.1rem;
 }
 
-h2 {
+h2,
+h3 {
     font-size: 1.9rem;
 }
 
@@ -338,7 +339,7 @@ html.has-scroll-dragging {
     align-items: center;
 }
 
-.contain-2 {
+.page-container {
     opacity: 0;
 }
 
@@ -681,7 +682,7 @@ html.has-scroll-dragging {
         grid-template-columns: 1fr;
     }
 
-    .backgroundZone{
+    .backgroundZone {
         height: 100dvh;
     }
 
@@ -718,150 +719,60 @@ html.has-scroll-dragging {
     }
 }
 
-/* Pagina de Foto */
-.photo-page {
-    color: #ffffff;
-}
-
-.menu {
-    position: absolute;
-    left: 2em;
-    bottom: 4em;
-}
-
-.menu__item {
-    display: inline-block;
-    opacity: 0;
-    position: relative;
-    top: +10vh;
-}
-
-.menu__item-image_wrapper {
-    position: fixed;
-    top: calc(6vh + 2em);
-    right: 2em;
-    /* transform: translate(-50%, -50%); */
-    width: 600px;
-    height: 400px;
-    pointer-events: none;
-    opacity: 0;
-}
-
-.menu__item-image_inner .menu__item-image {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.menu__item-text {
-    position: relative;
-    font-weight: 400;
-    font-size: 4vw;
-    line-height: 1;
-    color: #d1ccbc;
-    opacity: 1;
-    transition: opacity 350ms ease;
-    white-space: nowrap;
-    overflow: hidden;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.menu__item-text-smaller {
-    position: relative;
-    font-weight: 300;
-    font-size: 2.4vw;
-    line-height: 1;
-    color: #d1ccbc;
-    opacity: 1;
-    transition: opacity 350ms ease;
-    white-space: nowrap;
-    overflow: hidden;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.menu__item:hover .menu__item-text {
-    color: #cadd1b;
-}
-
-.menu__item:hover .menu__item-image_wrapper {
-    z-index: -2;
-}
-
-@media only screen and (max-width: 600px) {
-    .menu__item-image_wrapper {
-        position: fixed;
-        top: calc(7dvh + 3dvh);
-        right: 7vw;
-        height: calc(100dvh - 14dvh - 20dvh);
-        width: calc(100% - 14vw);
-        pointer-events: none;
-        opacity: 0;
-    }
-
-    .menu__item {
-        margin-top: .8rem;
-    }
-
-    .menu__item-text {
-        font-weight: 400;
-        font-size: 3rem;
-    }
-
-    .menu__item-text-smaller {
-        font-weight: 300;
-        font-size: 1.2rem;
-    }
-}
 /*-----Paginas Secundarias-----*/
-.contain-2{
+.page-container {
     color: #ffffff;
 }
-.contain-2 .nav-bar {
-    /* mix-blend-mode: difference; */
+
+.page-container .nav-bar {
     background-color: #1c1c1e;
 }
 
-/* Pagina de Foto */
-
-.poster-container {
-    display: grid;
-    grid-template-columns: 2em 1fr 2em;
-    grid-template-rows: 6vh 2em 6vh 2em 1fr 2em;
-    width: 100vw;
+#contain {
+    padding-top: 10vh;
 }
 
-.container-title {
-    grid-column: 2/3;
-    grid-row: 3/4;
-    text-align: center;
-}
-
-.gallery-container {
+.contain-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2em;
-    grid-column: 2/3;
-    grid-row: 5/6;
     width: 100%;
+    padding: 1em 0;
 }
 
-.gallery-container-2 .gallery-item {
-    height: 65vh;
+.gallery .gallery-item {
+    height: 70vh;
+}
+
+.contain-section h1,
+.contain-section h2,
+.contain-section h3 {
+    width: 100vw;
+    text-align: center;
+    padding: 0 2rem;
 }
 
 .gallery-item {
     width: calc(25vw - 6em);
-    height: 70vh;
+    height: auto;
     overflow: hidden;
     cursor: pointer;
     display: flex;
     flex-direction: column;
+    height: auto;
+    min-height: 35vh;
+}
+
+.gallery-item-2 {
+    width: calc(50vw - 10em);
+    height: auto;
+    min-height: 35vh;
+}
+
+.gallery-item p,
+.gallery-item-2 p {
+    padding: 0 2rem;
 }
 
 .item-img {
@@ -870,8 +781,6 @@ html.has-scroll-dragging {
 }
 
 .item-img img {
-    /* width: auto;
-    min-width: 100%; */
     height: 100%;
     transition: 0.35s ease-in-out all;
     transform: scale(1);
@@ -883,7 +792,7 @@ html.has-scroll-dragging {
 }
 
 .item-name {
-    height: 4em;
+    height: 5em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -938,32 +847,25 @@ html.has-scroll-dragging {
 }
 
 @media only screen and (max-width: 600px) {
-    .poster-container {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        padding-bottom: 4rem;
+    #contain {
+        padding-top: 3em;
     }
 
-    .container-title {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        width: 100vw;
-        /* height: 7dvh; */
-    }
-
-    .gallery-container {
+    .contain-section {
         flex-direction: column;
         align-items: center;
     }
 
-    .gallery-container-2 .gallery-item {
-        height: 60vh;
-    }
-
-    .gallery-item {
+    .gallery-item,
+    .gallery-item-2 {
         width: calc(100% - 4rem);
     }
+
+    .gallery-item p,
+    .gallery-item-2 p {
+        padding: 0 1em;
+    }
+
 
     .img-modal {
         display: grid;
@@ -1026,70 +928,8 @@ html.has-scroll-dragging {
     }
 }
 
-.redes-container {
-    padding-top: calc(6vh + 2em);
-    padding-left: 2em;
-    padding-right: 2em;
-    width: 100vw;
-}
-
-.redes-container .container-title {
-    width: 100%;
-    padding: 1em 0;
-}
-
-.container-text {
-    width: 100%;
-    padding: 1em;
-}
-
-.container-section {
-    display: flex;
-    padding-top: 2em;
-    padding-bottom: 2em;
-}
-
-.customer-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2em;
-    width: 100%;
-}
-
-.item-text {
-    display: flex;
-    justify-content: center;
-    gap: 2em;
-    padding: 1em;
-}
-
-.customer-gallery .gallery-item {
-    height: 90vh;
-}
-
-@media only screen and (max-width: 600px) {
-    .redes-container {
-        padding: 0;
-    }
-
-    .redes-container .container-section {
-        flex-direction: column;
-    }
-
-    .redes-container .container-title {
-        padding: 0 2em;
-    }
-
-    .customer-gallery .item-text {
-        height: auto;
-        padding: 4em 0;
-    }
-}
-
-
 /*-----Footer Area-----*/
-.redes-footer {
+.footer-section {
     width: 100%;
     background-color: #111111;
 }
