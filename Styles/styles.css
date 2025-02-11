@@ -864,7 +864,7 @@ html.has-scroll-dragging {
     .gallery-item,
     .gallery-item-2 {
         width: calc(100% - 4rem);
-        height: 70%;
+        height: 70svh;
     }
 
     .gallery-item p,
