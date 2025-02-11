@@ -581,9 +581,8 @@ html.has-scroll-dragging {
     }
 
     .nav-bar {
-        position: relative;
-        grid-column: 1/2;
-        grid-row: 1/2;
+        position: sticky;
+        top: 0;
         height: 100%;
         height: 7dvh;
     }
@@ -853,7 +852,7 @@ html.has-scroll-dragging {
 
 @media only screen and (max-width: 600px) {
     #contain {
-        padding-top: 3em;
+        padding-top: 6em;
     }
 
     .contain-section {
@@ -864,7 +863,6 @@ html.has-scroll-dragging {
     .gallery-item,
     .gallery-item-2 {
         width: calc(100% - 4rem);
-        height: 70svh;
     }
 
     .gallery-item p,
