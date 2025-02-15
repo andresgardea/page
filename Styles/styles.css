@@ -28,7 +28,8 @@ html {
         font-size: 11px;
     }
 }
-body{
+
+body {
     -webkit-overflow-scrolling: touch;
 }
 
@@ -767,12 +768,10 @@ html.has-scroll-dragging {
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    min-height: 35vh;
 }
 
 .gallery-item-2 {
     width: calc(50vw - 10em);
-    min-height: 35vh;
 }
 
 .gallery-item p,
@@ -857,21 +856,29 @@ html.has-scroll-dragging {
         padding-top: 6em;
     }
 
+    .nav-bar {
+        height: 5rem;
+    }
+
     .contain-section {
         flex-direction: column;
         align-items: center;
     }
 
-    .gallery-item,
+    .gallery-item {
+        width: calc(100% - 4rem);
+        height: 45rem !important;
+    }
+
     .gallery-item-2 {
         width: calc(100% - 4rem);
+        height: 25rem !important;
     }
 
     .gallery-item p,
     .gallery-item-2 p {
         padding: 0 1em;
     }
-
 
     .img-modal {
         display: grid;
