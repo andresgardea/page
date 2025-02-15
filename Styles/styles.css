@@ -28,6 +28,9 @@ html {
         font-size: 11px;
     }
 }
+body{
+    -webkit-overflow-scrolling: touch;
+}
 
 h1 {
     font-size: 3.1rem;
@@ -764,14 +767,12 @@ html.has-scroll-dragging {
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    height: auto;
-    min-height: 35vh;
+    min-height: 35dvh;
 }
 
 .gallery-item-2 {
     width: calc(50vw - 10em);
-    height: auto;
-    min-height: 35vh;
+    min-height: 35dvh;
 }
 
 .gallery-item p,
@@ -796,7 +797,8 @@ html.has-scroll-dragging {
 }
 
 .item-name {
-    height: 5em;
+    min-height: 4rem;
+    padding: 0.8rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
