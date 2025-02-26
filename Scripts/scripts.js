@@ -185,15 +185,15 @@ const stories = [
     backgroundClass: "t-1",
   },
   {
-    profileName: "Fotógrafo",
+    profileName: "Descubre más fotografías",
     backgroundTitle: ["Fotógrafo"],
-    descText: "Me apasiona la fotografía de naturaleza y me especializo en fotografía de productos y retratos.",
+    descText: "Me apasiona la fotografía de naturaleza y me especializo en fotografía gastronómica y de productos.",
     storyImg: "../Media/Servicios/Producto-4.webp",
     backgroundClass: "t-2",
     linkSrc: "../photo.html",
   },
   {
-    profileName: "Diseñador",
+    profileName: "Mira mis Diseños",
     backgroundTitle: ["Diseñador"],
     descText: "Estudio Diseño y Comunicación Gráfica, realizo trabajos de diseño tanto digital como tradicional.",
     storyImg: "../Media/Poster/Poster-005.webp",
@@ -201,7 +201,7 @@ const stories = [
     linkSrc: "../design.html",
   },
   {
-    profileName: "Programador",
+    profileName: "Conoce mis Trabajos",
     backgroundTitle: ["Programador"],
     descText: "He trabajado desarrollando y publicando páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio.",
     storyImg: "../Media/Developer/Developer-1.webp",
@@ -217,7 +217,7 @@ const stories = [
     linkSrc: "../servicios.html",
   },
   {
-    profileName: "Contacto",
+    profileName: "Contáctame",
     backgroundTitle: ["Contacto"],
     descText: "He trabajado desarrollando y lanzando páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio.",
     storyImg: "../Media/3.webp",
