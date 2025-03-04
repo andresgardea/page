@@ -190,7 +190,7 @@ const stories = [
     descText: "Me apasiona la fotografía de naturaleza y me especializo en fotografía gastronómica y de productos.",
     storyImg: "../Media/Servicios/Producto-4.webp",
     backgroundClass: "t-2",
-    linkSrc: "../photo.html",
+    linkSrc: "../Secundarias/photo.html",
   },
   {
     profileName: "Mira mis Diseños",
@@ -198,7 +198,7 @@ const stories = [
     descText: "Estudio Diseño y Comunicación Gráfica, realizo trabajos de diseño tanto digital como tradicional.",
     storyImg: "../Media/Poster/Poster-005.webp",
     backgroundClass: "t-3",
-    linkSrc: "../design.html",
+    linkSrc: "../Secundarias/design.html",
   },
   {
     profileName: "Conoce mis Trabajos",
@@ -206,7 +206,7 @@ const stories = [
     descText: "He trabajado desarrollando y publicando páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio.",
     storyImg: "../Media/Developer/Developer-1.webp",
     backgroundClass: "t-4",
-    linkSrc: "../develloper.html",
+    linkSrc: "../Secundarias/develloper.html",
   },
   {
     profileName: "Servicios",
@@ -214,7 +214,7 @@ const stories = [
     descText: "Conoce los servicios que ofrezco, desde sesiones fotográficas hasta planes diseño tradicional y digital.",
     storyImg: "../Media/5.webp",
     backgroundClass: "t-5",
-    linkSrc: "../servicios.html",
+    linkSrc: "../Secundarias/servicios.html",
   },
   {
     profileName: "Contáctame",
@@ -222,7 +222,7 @@ const stories = [
     descText: "He trabajado desarrollando y lanzando páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio.",
     storyImg: "../Media/3.webp",
     backgroundClass: "t-6",
-    linkSrc: "../photo.html",
+    linkSrc: "../Secundarias/photo.html",
   }
 ];
 
