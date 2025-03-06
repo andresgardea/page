@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
     <!-- Meta Etiquetas Básicas -->
     <title>Fotografía de Producto y Gastronómica | Andrés Gardea</title>
     <meta name="description"
@@ -335,81 +336,98 @@
         <script src="../Scripts/locomotive-scroll.min.js"></script>
 
         <script>
-            const scroll = new LocomotiveScroll({
-                el: document.querySelector('[data-scroll-container]'),
-                multmultiplier: 1,
+            // Esperar a que el DOM esté completamente cargado (opcional si el script va al final del body)
+            document.addEventListener('DOMContentLoaded', () => {
+              // Inicializar LocomotiveScroll con la configuración correcta
+              const scrollContainer = document.querySelector('[data-scroll-container]');
+              const scroll = new LocomotiveScroll({
+                el: scrollContainer,
+                multiplier: 1, // Corregido el nombre de la propiedad
                 smooth: true,
                 mobile: {
-                    breakpoint: 0,
-                    smooth: false,
+                  breakpoint: 0,
+                  smooth: false,
                 },
                 tablet: {
-                    breakpoint: 0,
-                    smooth: false,
+                  breakpoint: 0,
+                  smooth: false,
                 },
+              });
+          
+              // Actualizar el scroll después de 5 segundos
+              setTimeout(() => {
+                scroll.update();
+                console.log('update scroller');
+              }, 5000);
+          
+              // Crear el timeline de GSAP en pausa
+              const tl = gsap.timeline({ paused: true });
+          
+              // Seleccionar elementos de la galería y del modal
+              const galleryItems = document.querySelectorAll('.img-info');
+              const copyElement = document.querySelector('.copy');
+              const resourceElement = document.querySelector('.resource');
+          
+              // Función para actualizar la imagen y el texto del modal
+              const updateModalContent = (src, alt) => {
+                if (resourceElement) resourceElement.src = src;
+                if (copyElement) copyElement.innerHTML = alt;
+              };
+          
+              // Asignar evento a cada elemento de la galería
+              galleryItems.forEach(item => {
+                item.addEventListener("click", () => {
+                  const imgSrc = item.getAttribute('src');
+                  const imgAlt = item.getAttribute('alt');
+                  if (imgSrc && imgAlt) {
+                    updateModalContent(imgSrc, imgAlt);
+                  }
+                  // Mostrar el modal: si el timeline está en reversa, se reproduce hacia adelante; de lo contrario, se revierte
+                  tl.reversed() ? tl.play() : tl.reverse();
+                });
+              });
+          
+              // Evento para el botón de cierre del modal
+              const closeBtn = document.querySelector(".close-btn");
+              if (closeBtn) {
+                closeBtn.addEventListener("click", () => {
+                  tl.reversed() ? tl.play() : tl.reverse();
+                });
+              }
+          
+              // Definir la animación para revelar el modal usando la sintaxis de GSAP v3
+              const revealModal = () => {
+                tl.to(".img-modal", {
+                  duration: 0.75,
+                  clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)",
+                  ease: "power4.out",
+                  pointerEvents: "auto"
+                })
+                .to(".contain-section, .container", {
+                  duration: 0.01,
+                  pointerEvents: "none"
+                })
+                .to(".img-modal .img-container", {
+                  duration: 0.75,
+                  clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)",
+                  ease: "power4.out"
+                })
+                .to(".modal-item p", {
+                  duration: 1,
+                  top: 0,
+                  ease: "power4.out",
+                  opacity: 1,
+                  stagger: 0.2
+                }, "<");
+              };
+          
+              // Configurar la animación del modal
+              revealModal();
+              // Inicialmente, mantener el timeline en estado reverso para que al llamar a play() se revele el modal
+              tl.reverse(0);
             });
-
-            setTimeout(function () { scroll.update(); console.log('update scroller') }, 5000);
-
-
-
-            const tl = gsap.timeline({ paused: true });
-            const clickZone2 = document.querySelectorAll('.gallery-item');
-            const imgInfo = document.querySelectorAll('.img-info');
-            const copy = document.querySelector('.copy');
-            const resource = document.querySelector('.resource');
-
-            imgInfo.forEach(clickZone2 => {
-                clickZone2.addEventListener("click", () => {
-                    addImage(clickZone2.getAttribute('src'), clickZone2.getAttribute('alt'))
-                    tl.reversed(!tl.reversed());
-                });
-            });
-
-            const addImage = (srcImage, copyImage) => {
-                resource.src = srcImage;
-                copy.innerHTML = copyImage;
-            }
-
-            const closeBtn = document.querySelector(".close-btn");
-            if (closeBtn) {
-                closeBtn.addEventListener("click", function () {
-                    tl.reversed(!tl.reversed());
-                });
-            }
-
-            function revealModal() {
-                tl.to(".img-modal", 0.75, {
-                    clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)",
-                    ease: "power4.out",
-                    pointerEvents: "auto",
-                });
-
-                tl.to(".contain-section, .container", 0.01, {
-                    pointerEvents: "none",
-                });
-
-                tl.to(".img-modal .img-container", 0.75, {
-                    clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)",
-                    ease: "power4.out",
-                });
-
-                tl.to(
-                    ".modal-item p",
-                    1,
-                    {
-                        top: 0,
-                        ease: "power4.out",
-                        opacity: 1,
-                        stagger: {
-                            amount: 0.2,
-                        },
-                    },
-                    "<"
-                ).reverse();
-            }
-
-            revealModal();</script>
+          </script>
+          
     </div>
 </body>
 
