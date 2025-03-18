@@ -756,6 +756,7 @@ html.has-scroll-dragging {
 
 .gallery .gallery-item {
     height: 70vh;
+    overflow: hidden;
 }
 
 .contain-section h1,
@@ -764,6 +765,11 @@ html.has-scroll-dragging {
     width: 100vw;
     text-align: center;
     padding: 0 2rem;
+}
+
+.container-title{
+    top: -10vh;
+    opacity: 0;
 }
 
 .gallery-item {
@@ -781,7 +787,7 @@ html.has-scroll-dragging {
 
 .gallery-item p,
 .gallery-item-2 p {
-    padding: 0 1rem;
+    padding: 1rem;
 }
 
 .item-img {
@@ -858,7 +864,7 @@ html.has-scroll-dragging {
 
 @media only screen and (max-width: 600px) {
     #contain {
-        padding-top: 6em;
+        padding-top: 2em;
     }
 
     .nav-bar {
@@ -872,7 +878,6 @@ html.has-scroll-dragging {
 
     .gallery-item {
         width: calc(100% - 4rem);
-        height: 45rem !important;
     }
 
     .gallery-item-2 {
@@ -880,9 +885,8 @@ html.has-scroll-dragging {
         height: 25rem !important;
     }
 
-    .gallery-item p,
-    .gallery-item-2 p {
-        padding: 0 1em;
+    .quote{
+        padding: 3rem 0;    
     }
 
     .img-modal {

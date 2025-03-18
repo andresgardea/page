@@ -132,7 +132,7 @@ function startLoader() {
       //   delay: 4,
       // });
 
-      gsap.to(".nav-bar h1, .nav-bar a, .nav-bar .reloj", {
+      gsap.to(".nav-bar h1, .nav-bar a, .nav-bar .reloj, .container-title", {
         opacity: 1,
         top: "0",
         ease: "power3.inOut",
@@ -141,6 +141,16 @@ function startLoader() {
         stagger: 0.2,
 
       });
+
+      gsap.from(".gallery-item",{
+          y: "60",
+          duration: 1.2,
+          opacity: 0,
+          ease: "power2.easeOut",
+          delay: 4.1,
+          stagger: 0.1,
+        },
+      );
 
       // gsap.to(".info p, .menu__item", {
       //   top: "0",
