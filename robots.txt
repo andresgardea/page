@@ -1,3 +1,4 @@
-User-agent: Googlebot-Image
+User-agent: *
+Disallow:
 
-Disallow: Media/Poster/Poster-002.webp
+Sitemap: https://andresgardea.com/sitemap.xml
