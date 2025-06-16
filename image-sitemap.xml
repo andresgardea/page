@@ -1,166 +1,197 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://andresgardea.com/</loc>
+    <priority>1.0</priority>
     <image:image>
-      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-10.webp</image:loc>
+      <image:loc>https://andresgardea.com/Media/000.webp</image:loc>
     </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
-    <image:image>
-      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-17.webp</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
-    <image:image>
-      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-18.webp</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
-    <image:image>
-      <image:loc>https://andresgardea.com/Media/Servicios/Producto-1.webp</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
-    <image:image>
-      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-5.webp</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
-    <image:image>
-      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-11.webp</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
-    <image:image>
-      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-7.webp</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
-    <image:image>
-      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-15.webp</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
     <image:image>
       <image:loc>https://andresgardea.com/Media/Servicios/Producto-4.webp</image:loc>
     </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
     <image:image>
-      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-9.webp</image:loc>
+      <image:loc>https://andresgardea.com/Media/Poster/Poster-005.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Developer/Developer-1.webp</image:loc>
     </image:image>
   </url>
+
   <url>
     <loc>https://andresgardea.com/</loc>
+    <priority>0.8</priority>
     <image:image>
-      <image:loc>https://andresgardea.com/Media/001.webp</image:loc>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-31.webp</image:loc>
     </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
     <image:image>
-      <image:loc>https://andresgardea.com/Media/Servicios/Producto-5.webp</image:loc>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-26.webp</image:loc>
     </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
-    <image:image>
-      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-24.webp</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
-    <image:image>
-      <image:loc>https://andresgardea.com/Media/Servicios/Producto-6.webp</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
-    <image:image>
-      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-19.webp</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
-    <image:image>
-      <image:loc>https://andresgardea.com//Media/000.webp</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
     <image:image>
       <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-22.webp</image:loc>
     </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
     <image:image>
-      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-20.webp</image:loc>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-11.webp</image:loc>
     </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
     <image:image>
-      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-8.webp</image:loc>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-17.webp</image:loc>
     </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
     <image:image>
-      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-14.webp</image:loc>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-9.webp</image:loc>
     </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
-    <image:image>
-      <image:loc>https://andresgardea.com/Media/Servicios/Producto-2.webp</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
-    <image:image>
-      <image:loc>https://andresgardea.com//Media/001.webp</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
-    <image:image>
-      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-23.webp</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
-    <image:image>
-      <image:loc>https://andresgardea.com/Media/Servicios/Producto-3.webp</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
     <image:image>
       <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-6.webp</image:loc>
     </image:image>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/</loc>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-10.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-7.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-27.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-5.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-19.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-1.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-8.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-30.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-23.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-15.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-18.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-20.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-28.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-34.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-14.webp</image:loc>
+    </image:image>
     <image:image>
       <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-12.webp</image:loc>
     </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-24.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-29.webp</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Producto-1.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Producto-10.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Producto-6.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Producto-15.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Producto-17.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Producto-22.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Producto-2.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Producto-8.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Producto-4.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Producto-12.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Producto-18.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Producto-3.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Producto-23.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Producto-14.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Producto-20.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Producto-5.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Producto-11.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Producto-13.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Producto-21.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Producto-19.webp</image:loc>
+    </image:image>
   </url>
+
   <url>
-    <loc>https://andresgardea.com/</loc>
+    <loc>https://andresgardea.com/Secundarias/servicios.html</loc>
+    <priority>0.6</priority>
     <image:image>
       <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-1.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-27.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-9.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-10.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-7.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-32.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Gastronomica-22.webp</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Producto-8.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Producto-4.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://andresgardea.com/Media/Servicios/Producto-17.webp</image:loc>
     </image:image>
   </url>
 </urlset>
