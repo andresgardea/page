@@ -4,3 +4,7 @@ Disallow:
 Allow: /
 
 Sitemap: https://andresgardea.com/sitemap.xml
+
+User-agent: Googlebot-Image
+
+Allow: /
