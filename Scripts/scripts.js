@@ -142,14 +142,14 @@ function startLoader() {
 
       });
 
-      gsap.from(".gallery-item",{
-          y: "60",
-          duration: 1.2,
-          opacity: 0,
-          ease: "power2.easeOut",
-          delay: 4.1,
-          stagger: 0.1,
-        },
+      gsap.from(".gallery-item", {
+        y: "60",
+        duration: 1.2,
+        opacity: 0,
+        ease: "power2.easeOut",
+        delay: 4.1,
+        stagger: 0.1,
+      },
       );
 
       // gsap.to(".info p, .menu__item", {
@@ -195,44 +195,54 @@ const stories = [
     backgroundClass: "t-1",
   },
   {
-    profileName: "Descubre más fotografías",
+    profileName: "Fotografía Gastronómica",
     backgroundTitle: ["Fotógrafo"],
-    descText: "Me apasiona la fotografía de naturaleza y me especializo en fotografía gastronómica y de productos.",
-    storyImg: "../Media/Servicios/Producto-4.webp",
+    descText: "Me especializo en fotografía gastronómica y de productos, lleva la imagen de tu restaurante o cafeteria al siguiente nivel con fotos de calidad.",
+    storyImg: "../Media/Gastronomica/Gastronomica-40.webp",
+    backgroundClass: "t-4",
+    linkSrc: "../Secundarias/gastronomica.html",
+  },
+  {
+    profileName: "Fotografía de Producto",
+    backgroundTitle: ["Fotógrafo"],
+    descText: "Eleva la imagen de tu marca al siguiente nivel a traves de fotografías profesionales que resalten lo mejor de tu producto.",
+    storyImg: "../Media/Producto/Producto-4.webp",
     backgroundClass: "t-2",
-    linkSrc: "../Secundarias/photo.html",
+    linkSrc: "../Secundarias/producto.html",
   },
   {
     profileName: "Mira mis Diseños",
     backgroundTitle: ["Diseñador"],
-    descText: "Estudio Diseño y Comunicación Gráfica, realizo trabajos de diseño tanto digital como tradicional.",
-    storyImg: "../Media/Poster/Poster-005.webp",
+    descText: "Realizo trabajos de diseño tanto digital como tradicional.",
+    storyImg: "../Media/Design/Poster-005.webp",
     backgroundClass: "t-3",
     linkSrc: "../Secundarias/design.html",
   },
-  {
-    profileName: "Conoce mis Trabajos",
-    backgroundTitle: ["Programador"],
-    descText: "He trabajado desarrollando y publicando páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio.",
-    storyImg: "../Media/Developer/Developer-1.webp",
-    backgroundClass: "t-4",
-    linkSrc: "../Secundarias/develloper.html",
-  },
-  {
-    profileName: "Servicios",
-    backgroundTitle: ["Servicios"],
-    descText: "Conoce los servicios que ofrezco, desde sesiones fotográficas hasta planes diseño tradicional y digital.",
-    storyImg: "../Media/5.webp",
-    backgroundClass: "t-5",
-    linkSrc: "../Secundarias/servicios.html",
-  },
+
+  // {
+  //   profileName: "Conoce mis Trabajos",
+  //   backgroundTitle: ["Programador"],
+  //   descText: "He trabajado desarrollando y publicando páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio.",
+  //   storyImg: "../Media/Developer/Developer-1.webp",
+  //   backgroundClass: "t-4",
+  //   linkSrc: "../Secundarias/develloper.html",
+  // },
+  // {
+  //   profileName: "Servicios",
+  //   backgroundTitle: ["Servicios"],
+  //   descText: "Conoce los servicios que ofrezco, desde sesiones fotográficas hasta planes diseño tradicional y digital.",
+  //   storyImg: "../Media/5.webp",
+  //   backgroundClass: "t-5",
+  //   linkSrc: "../Secundarias/servicios.html",
+  // },
+
   {
     profileName: "Contáctame",
     backgroundTitle: ["Contacto"],
-    descText: "He trabajado desarrollando y lanzando páginas como UnfotografomasCUU, ChihuahuaMx y KarmaStudio.",
+    descText: "Mándame un mensaje a traves de Instagram @unfotografomascuu para darte mas información o agendar tu sesión",
     storyImg: "../Media/3.webp",
     backgroundClass: "t-6",
-    linkSrc: "../Secundarias/photo.html",
+    linkSrc: "https://www.instagram.com/direct/t/unfotografomascuu",
   }
 ];
 
