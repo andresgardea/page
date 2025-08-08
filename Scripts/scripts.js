@@ -242,7 +242,7 @@ const stories = [
     descText: "Mándame un mensaje a traves de Instagram @unfotografomascuu para darte mas información o agendar tu sesión",
     storyImg: "../Media/3.webp",
     backgroundClass: "t-6",
-    linkSrc: "https://www.instagram.com/direct/t/unfotografomascuu",
+    linkSrc: "https://www.instagram.com/unfotografomascuu/",
   }
 ];
 
