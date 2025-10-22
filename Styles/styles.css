@@ -850,6 +850,12 @@ html.has-scroll-dragging {
   height: max-content;
 }
 
+.modal-item-text {
+  padding: 0 3rem;
+  text-align: justify;
+  max-width: 33%;
+}
+
 .modal-item p {
   position: relative;
   color: #fff;
@@ -859,6 +865,20 @@ html.has-scroll-dragging {
 
 .close-btn {
   cursor: pointer;
+}
+
+.contactTitle {
+  font-size: 3.5rem;
+  text-align: center;
+  width: 100% !important;
+  padding: 2rem 0;
+}
+
+.contactBtn{
+  font-size: 1.9rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 1rem 2rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -889,20 +909,26 @@ html.has-scroll-dragging {
   }
 
   .img-modal {
+    height: 108dvh;
     display: grid;
-    grid-template-rows: 7dvh 3dvh 1fr 3dvh 8dvh;
     grid-template-columns: 7vw 1fr 7vw;
+    grid-template-rows: 6dvh 1fr 1rem 12dvh 1rem 3dvh 6dvh 4rem;
     padding: 0;
   }
 
   .img-modal .img-container {
-    width: 100vw;
-    height: 100%;
+    padding: 0 7vw;
+  }
+
+  .img-container {
     grid-column: 2 / 3;
-    grid-row: 3 / 4;
+    grid-row: 2 / 4;
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: calc(100dvh - 14dvh - 20dvh) 1rem 1fr 1rem;
+    grid-template-rows: calc(100dvh - 14dvh - 20dvh);
+    padding: 0;
   }
 
   .img-modal .img-container img {
@@ -910,28 +936,14 @@ html.has-scroll-dragging {
   }
 
   .img-name {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
     width: 100vw;
-    height: 100%;
-    grid-column: 2/3;
-    grid-row: 3/4;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: calc(100dvh - 14dvh - 20dvh) 1rem 1fr 1rem;
-  }
-
-  .copy {
-    grid-column: 1/2;
-    grid-row: 3/4;
-    padding: 0;
-    gap: 0;
-    padding: 1.5rem;
-    margin-top: 2rem;
-    justify-content: space-around;
-    text-align: justify;
+    height: auto;
   }
 
   .close-btn {
-    grid-row: 4/6;
+    grid-row: 6/7;
     grid-column: 2/3;
     justify-content: center;
     text-align: center;
@@ -943,14 +955,14 @@ html.has-scroll-dragging {
   .modal-item {
     max-width: 100%;
     padding: 0 1.5rem;
-}
+  }
 
   .close-btn p {
     font-size: 1.4rem;
   }
 
   .resource {
-    margin: 10px 0;
+    margin: 0;
   }
 }
 
