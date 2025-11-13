@@ -1,10 +1,41 @@
 User-agent: *
-Disallow:
-
 Allow: /
 
 Sitemap: https://andresgardea.com/sitemap.xml
+Sitemap: https://andresgardea.com/image-sitemap.xml
 
-User-agent: Googlebot-Image
+User-agent: *
+Disallow: /Media/Producto/Producto-8.webp
+Disallow: /Media/Producto/Producto-9.webp
+Disallow: /Media/Producto/Producto-21.webp
+Disallow: /Media/Producto/Producto-25.webp
+Disallow: /Media/Producto/Producto-26.webp
+Disallow: /Media/Producto/Producto-35.webp
+Disallow: /Media/Producto/Producto-39.webp
+Disallow: /Media/Producto/Producto-42.webp
+Disallow: /Media/Producto/Producto-44.webp
+Disallow: /Media/Producto/Producto-45.webp
 
-Allow: /
+Disallow: /Media/Gastronomica/Gastronomica-2.webp
+Disallow: /Media/Gastronomica/Gastronomica-3.webp
+Disallow: /Media/Gastronomica/Gastronomica-4.webp
+Disallow: /Media/Gastronomica/Gastronomica-5.webp
+Disallow: /Media/Gastronomica/Gastronomica-6.webp
+Disallow: /Media/Gastronomica/Gastronomica-7.webp
+Disallow: /Media/Gastronomica/Gastronomica-12.webp
+Disallow: /Media/Gastronomica/Gastronomica-23.webp
+Disallow: /Media/Gastronomica/Gastronomica-24.webp
+Disallow: /Media/Gastronomica/Gastronomica-25.webp
+Disallow: /Media/Gastronomica/Gastronomica-54.webp
+Disallow: /Media/Gastronomica/Gastronomica-57.webp
+Disallow: /Media/Gastronomica/Gastronomica-58.webp
+Disallow: /Media/Gastronomica/Gastronomica-61.webp
+Disallow: /Media/Gastronomica/Gastronomica-65.webp
+
+
+
+
+
+
+
+
