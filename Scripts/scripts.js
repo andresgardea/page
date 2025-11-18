@@ -29,9 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   gsap.to(".Image-Holder img", {
     left: 0,
-    stagger: 0.1,
+    stagger: 0.2,
     ease: "power4.out",
-    duration: 1.6,
+    duration: 1.3,
     delay: 2.8,
   });
 
@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
     left: "110%",
     stagger: -0.1,
     ease: "power4.out",
-    duration: 1.6,
-    delay: 7.1,
+    duration: 1.55,
+    delay: 7.52,
   });
 });
 
@@ -197,7 +197,7 @@ const stories = [
   {
     profileName: "Fotografía Gastronómica",
     backgroundTitle: ["Fotógrafo"],
-    descText: "Me especializo en fotografía gastronómica y de productos, lleva la imagen de tu restaurante o cafeteria al siguiente nivel con fotos de calidad.",
+    descText: "Fotografía gastronómica profesional en Chihuahua para restaurantes y cafeterías que buscan imágenes de calidad para menús, redes sociales y publicidad.",
     storyImg: "../Media/Gastronomica/Gastronomica-40.webp",
     backgroundClass: "t-4",
     linkSrc: "../Secundarias/gastronomica.html",
@@ -205,7 +205,7 @@ const stories = [
   {
     profileName: "Fotografía de Producto",
     backgroundTitle: ["Fotógrafo"],
-    descText: "Eleva la imagen de tu marca al siguiente nivel a traves de fotografías profesionales que resalten lo mejor de tu producto.",
+    descText: "Fotografía de producto profesional en Chihuahua para marcas, tiendas y emprendimientos que necesitan imágenes atractivas para e-commerce, catálogos y campañas.",
     storyImg: "../Media/Producto/Producto-4.webp",
     backgroundClass: "t-2",
     linkSrc: "../Secundarias/producto.html",
@@ -213,7 +213,7 @@ const stories = [
   {
     profileName: "Mira mis Diseños",
     backgroundTitle: ["Diseñador"],
-    descText: "Realizo trabajos de diseño tanto digital como tradicional.",
+    descText: "Servicios de diseño gráfico e identidad visual en Chihuahua para marcas que buscan contenido digital profesional y materiales que refuercen su imagen.",
     storyImg: "../Media/Design/Poster-005.webp",
     backgroundClass: "t-3",
     linkSrc: "../Secundarias/design.html",
@@ -239,10 +239,10 @@ const stories = [
   {
     profileName: "Contáctame",
     backgroundTitle: ["Contacto"],
-    descText: "Mándame un mensaje a traves de Instagram @unfotografomascuu para darte mas información o agendar tu sesión",
+    descText: "Contáctame por Instagram para más información o para agendar una sesión de fotografía profesional en Chihuahua.",
     storyImg: "../Media/3.webp",
     backgroundClass: "t-6",
-    linkSrc: "https://www.instagram.com/unfotografomascuu/",
+    linkSrc: "https://www.instagram.com/andresgardea.photo/",
   }
 ];
 
