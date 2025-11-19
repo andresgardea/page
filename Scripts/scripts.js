@@ -190,7 +190,7 @@ const stories = [
     backgroundTitle: [
       "Andrés Gardea",
     ],
-    descText: "Soy un Fotógrafo y Diseñador Gráfico de la ciudad de Chihuahua México.",
+    descText: "Soy un Fotógrafo  Gastronomico y Publicitaro de la ciudad de Chihuahua México.",
     storyImg: "../Media/000.webp",
     backgroundClass: "t-1",
   },
@@ -205,7 +205,7 @@ const stories = [
   {
     profileName: "Fotografía de Producto",
     backgroundTitle: ["Fotógrafo"],
-    descText: "Fotografía de producto profesional en Chihuahua para marcas, tiendas y emprendimientos que necesitan imágenes atractivas para e-commerce, catálogos y campañas.",
+    descText: "Fotografía de producto profesional en Chihuahua para marcas, tiendas y emprendimientos que necesitan imágenes atractivas.",
     storyImg: "../Media/Producto/Producto-4.webp",
     backgroundClass: "t-2",
     linkSrc: "../Secundarias/producto.html",
@@ -213,7 +213,7 @@ const stories = [
   {
     profileName: "Mira mis Diseños",
     backgroundTitle: ["Diseñador"],
-    descText: "Servicios de diseño gráfico e identidad visual en Chihuahua para marcas que buscan contenido digital profesional y materiales que refuercen su imagen.",
+    descText: "Servicios de diseño gráfico en Chihuahua para marcas que buscan contenido digital o tradicional.",
     storyImg: "../Media/Design/Poster-005.webp",
     backgroundClass: "t-3",
     linkSrc: "../Secundarias/design.html",
@@ -239,7 +239,7 @@ const stories = [
   {
     profileName: "Contáctame",
     backgroundTitle: ["Contacto"],
-    descText: "Contáctame por Instagram para más información o para agendar una sesión de fotografía profesional en Chihuahua.",
+    descText: "Contáctame por Instagram para más información o para agendar una sesión de fotografía profesional para tu negocio.",
     storyImg: "../Media/3.webp",
     backgroundClass: "t-6",
     linkSrc: "https://www.instagram.com/andresgardea.photo/",
