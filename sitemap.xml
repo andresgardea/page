@@ -1,39 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- HOME -->
   <url>
     <loc>https://andresgardea.com/</loc>
-    <lastmod>2025-10-21</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/Secundarias/producto.html</loc>
-    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- GASTRONOMÍA -->
+  <url>
+    <loc>https://andresgardea.com/Gastronomica/gastronomica.html</loc>
     <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
   </url>
+
+  <!-- PRODUCTO -->
   <url>
-    <loc>https://andresgardea.com/Secundarias/gastronomica.html</loc>
-    <lastmod>2025-10-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://andresgardea.com/Producto/producto.html</loc>
     <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
   </url>
+
+  <!-- Design -->
   <url>
-    <loc>https://andresgardea.com/Secundarias/servicios.html</loc>
-    <lastmod>2025-08-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://andresgardea.com/Design/design.html</loc>
     <priority>0.8</priority>
+    <changefreq>yearly</changefreq>
   </url>
-  <url>
-    <loc>https://andresgardea.com/Secundarias/design.html</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://andresgardea.com/Secundarias/develloper.html</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+
 </urlset>
