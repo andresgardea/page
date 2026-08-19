@@ -2,25 +2,24 @@
 
 gsap.to("#loadingScreen", {
   opacity: 1,
-  duration: .5,
+  duration: 0.5,
 });
 
 gsap.to(".Loader", {
   opacity: 1,
-  duration: .2,
+  duration: 0.2,
 });
-
 
 gsap.to(".contain, .page-container", {
   opacity: 1,
   duration: 0.1,
-  delay: 1
+  delay: 1,
 });
 
 gsap.to(".clickZone", {
   pointerEvents: "auto",
   duration: 0,
-  delay: 8.7
+  delay: 8.7,
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -80,9 +79,7 @@ function startLoader() {
   }
 
   function animateText() {
-
     setTimeout(() => {
-
       gsap.to(".counter p span", {
         top: "-400px",
         stagger: 0.1,
@@ -114,7 +111,6 @@ function startLoader() {
         delay: 4.2,
       });
 
-
       gsap.to(".imageZone img", {
         scale: 1,
         opacity: 1,
@@ -139,7 +135,6 @@ function startLoader() {
         duration: 1.9,
         delay: 4,
         stagger: 0.2,
-
       });
 
       gsap.from(".gallery-item", {
@@ -149,8 +144,7 @@ function startLoader() {
         ease: "power2.easeOut",
         delay: 4.1,
         stagger: 0.1,
-      },
-      );
+      });
 
       // gsap.to(".info p, .menu__item", {
       //   top: "0",
@@ -163,9 +157,8 @@ function startLoader() {
 
       gsap.to(".clickZone", {
         delay: 4,
-        duration: 0
+        duration: 0,
       });
-
     }, 300);
   }
 
@@ -176,8 +169,11 @@ startLoader();
 
 /*-----Reloj-----*/
 var ChihuahuaTime = function () {
-  document.getElementById("time-text").innerHTML = new Date().toLocaleString("en-US", { timeZone: "America/Chihuahua", timeStyle: "medium" })
-}
+  document.getElementById("time-text").innerHTML = new Date().toLocaleString(
+    "en-US",
+    { timeZone: "America/Chihuahua", timeStyle: "medium" },
+  );
+};
 
 ChihuahuaTime();
 setInterval(ChihuahuaTime, 1000);
@@ -187,33 +183,35 @@ setInterval(ChihuahuaTime, 1000);
 const stories = [
   {
     profileName: "Andrés Gardea",
-    backgroundTitle: [
-      "Andrés Gardea",
-    ],
-    descText: "Soy un Fotógrafo  Gastronomico y Publicitaro de la ciudad de Chihuahua México.",
+    backgroundTitle: ["Andrés Gardea"],
+    descText:
+      "Soy un Fotógrafo  Gastronomico y Publicitaro de la ciudad de Chihuahua México.",
     storyImg: "../Media/000.webp",
     backgroundClass: "t-1",
   },
   {
-    profileName: "Fotografía Gastronómica",
-    backgroundTitle: ["Fotógrafo"],
-    descText: "Fotografía gastronómica profesional en Chihuahua para restaurantes y cafeterías que buscan imágenes de calidad para menús, redes sociales y publicidad.",
-    storyImg: "../Gastronomica/Gastronomica-108.webp",
-    backgroundClass: "t-4",
-    linkSrc: "../Gastronomica/gastronomica.html",
-  },
-  {
     profileName: "Fotografía de Producto",
-    backgroundTitle: ["Fotógrafo"],
-    descText: "Fotografía de producto profesional en Chihuahua para marcas, tiendas y emprendimientos que necesitan imágenes atractivas.",
+    backgroundTitle: ["Producto"],
+    descText:
+      "Fotografía de producto profesional en Chihuahua para marcas, tiendas y emprendimientos que necesitan imágenes atractivas.",
     storyImg: "../Producto/Producto-030.webp",
     backgroundClass: "t-2",
     linkSrc: "../Producto/producto.html",
   },
   {
+    profileName: "Fotografía Gastronómica",
+    backgroundTitle: ["Gastronomía"],
+    descText:
+      "Fotografía gastronómica profesional en Chihuahua para restaurantes y cafeterías que buscan imágenes de calidad para menús, redes sociales y publicidad.",
+    storyImg: "../Gastronomica/Gastronomica-108.webp",
+    backgroundClass: "t-4",
+    linkSrc: "../Gastronomica/gastronomica.html",
+  },
+  {
     profileName: "Mira mis Diseños",
-    backgroundTitle: ["Diseñador"],
-    descText: "Servicios de diseño gráfico en Chihuahua para marcas que buscan contenido digital o tradicional.",
+    backgroundTitle: ["Diseño"],
+    descText:
+      "Servicios de diseño gráfico en Chihuahua para marcas que buscan contenido digital o tradicional.",
     storyImg: "../Design/Poster-005-W.webp",
     backgroundClass: "t-3",
     linkSrc: "../Design/design.html",
@@ -239,11 +237,12 @@ const stories = [
   {
     profileName: "Contáctame",
     backgroundTitle: ["Contacto"],
-    descText: "Contáctame por Instagram para más información o para agendar una sesión de fotografía profesional para tu negocio.",
+    descText:
+      "Contáctame por Instagram para más información o para agendar una sesión de fotografía profesional para tu negocio.",
     storyImg: "../Media/3.webp",
     backgroundClass: "t-6",
     linkSrc: "https://www.instagram.com/andresgardea.photo/",
-  }
+  },
 ];
 
 let activeStory = -1; //Sepa la v porque funciona xD
@@ -284,28 +283,26 @@ function animateIndexHighlight(index) {
 
 /*Camio de Imagen*/
 function animateNewImage(imgContainer, currentDirection) {
-
   if (currentDirection === "next") {
     gsap.set(imgContainer, {
       clipPath:
         currentDirection === "next"
-          ? 'polygon(0% 100%, 100% 100%, 100% 100%, 0 100%)'
-          : 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+          ? "polygon(0% 100%, 100% 100%, 100% 100%, 0 100%)"
+          : "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
     });
 
     gsap.to(imgContainer, {
-      clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+      clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
       duration: 1,
       ease: "power4.out",
     });
-
   } else {
     gsap.set(imgContainer, {
-      clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)',
+      clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
     });
 
     gsap.to(imgContainer, {
-      clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+      clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
       duration: 1,
       ease: "power4.out",
     });
@@ -318,19 +315,19 @@ function animateImageScale(currentImg, upcomingImg) {
     { scale: 1, rotate: 0 },
     {
       scale: 1.1,
-      duration: .8,
+      duration: 0.8,
       ease: "power4.inOut",
       onComplete: () => {
         currentImg.parentElement.remove();
       },
-    }
+    },
   );
   gsap.fromTo(
     upcomingImg,
     {
-      scale: 1.1
+      scale: 1.1,
     },
-    { scale: 1, duration: .2, ease: "power4.inOut" }
+    { scale: 1, duration: 0.2, ease: "power4.inOut" },
   );
 }
 /*----Zona de Cambio del Background-----*/
@@ -339,29 +336,27 @@ function animateNewBackground(currentBackgroundContent, currentDirection) {
     gsap.set(currentBackgroundContent, {
       clipPath:
         currentDirection === "next"
-          ? 'polygon(0% 100%, 100% 100%, 100% 100%, 0 100%)'
-          : 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+          ? "polygon(0% 100%, 100% 100%, 100% 100%, 0 100%)"
+          : "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
     });
 
     gsap.to(currentBackgroundContent, {
-      clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+      clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
       duration: 1,
       ease: "power4.out",
     });
-
   } else {
     gsap.set(currentBackgroundContent, {
-      clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)',
+      clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
     });
 
     gsap.to(currentBackgroundContent, {
-      clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+      clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
       duration: 1,
       ease: "power4.out",
-      delay: 0.3
+      delay: 0.3,
     });
   }
-
 }
 
 /*Eliminar elementos al cambiar de pagina*/
@@ -370,7 +365,6 @@ function cleanUpElements() {
   const backgroundTitle = document.querySelector(".backgroundTitle");
   const image = document.querySelector(".story-img");
   const background = document.querySelector(".backgroundColor");
-
 
   while (profileNameDiv.childElementCount > 1) {
     profileNameDiv.removeChild(profileNameDiv.firstChild);
@@ -387,7 +381,6 @@ function cleanUpElements() {
   while (backgroundTitle.childElementCount > 1) {
     backgroundTitle.removeChild(backgroundTitle.firstChild);
   }
-
 }
 
 function changeStory(isAutomatic = true) {
@@ -411,7 +404,6 @@ function changeStory(isAutomatic = true) {
     const newProfileName = document.createElement("a");
     newProfileName.innerText = story.profileName;
     newProfileName.href = story.linkSrc;
-
 
     const profileNameDiv = document.querySelector(".desc-name");
     profileNameDiv.appendChild(newProfileName);
@@ -445,14 +437,17 @@ function changeStory(isAutomatic = true) {
     newTitle.innerText = story.backgroundTitle;
     newBackgroundTitle.appendChild(newTitle);
 
-
     const backgroundDiv = document.querySelector(".backgroundColor");
     backgroundDiv.appendChild(backgroundContainer);
 
     animateNewBackground(backgroundContainer, currentDirection);
 
     const upcomingBackground = newBackground;
-    animateNewBackground(currentBackgroundContent, upcomingBackground, currentDirection);
+    animateNewBackground(
+      currentBackgroundContent,
+      upcomingBackground,
+      currentDirection,
+    );
 
     resetIndexHighlight(previousStory, currentDirection);
     animateIndexHighlight(activeStory);
@@ -468,12 +463,11 @@ function changeStory(isAutomatic = true) {
     desc.textContent = story.descText;
     desc.href = story.descSrc;
   }, 200);
-
 }
 
 /*-----Cursor-----*/
 const cursor = document.querySelector(".cursor");
-const cursorIcon = cursor.querySelector('i');
+const cursorIcon = cursor.querySelector("i");
 
 document.addEventListener("mousemove", (event) => {
   const { clientX, clientY } = event;
@@ -486,14 +480,14 @@ document.addEventListener("mousemove", (event) => {
 
   const viewportWidth = window.innerWidth;
   if (clientX < viewportWidth / 2) {
-    cursorIcon.classList.remove('ph-arrow-right');
-    cursorIcon.classList.add('ph-arrow-left');
-    cursor.style.display = '';
+    cursorIcon.classList.remove("ph-arrow-right");
+    cursorIcon.classList.add("ph-arrow-left");
+    cursor.style.display = "";
     direction = "prev";
   } else {
-    cursorIcon.classList.remove('ph-arrow-left');
-    cursorIcon.classList.add('ph-arrow-right');
-    cursor.style.display = '';
+    cursorIcon.classList.remove("ph-arrow-left");
+    cursorIcon.classList.add("ph-arrow-right");
+    cursor.style.display = "";
     direction = "next";
   }
 });
