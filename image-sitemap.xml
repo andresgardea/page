@@ -24,9 +24,6 @@
     <image:image><image:loc>https://andresgardea.com/Gastronomica/Gastronomica-107.webp</image:loc><image:title>Fotografía de comida para restaurantes</image:title></image:image>
     <image:image><image:loc>https://andresgardea.com/Gastronomica/Gastronomica-121.webp</image:loc><image:title>Fotografía gastronómica profesional</image:title></image:image>
   </url>
-</urlset>
-
-
   <url>
     <loc>https://andresgardea.com/</loc>
     <image:image>
@@ -42,3 +39,8 @@
       <image:loc>https://andresgardea.com/Design/Poster-005.webp</image:loc>
     </image:image>
   </url>
+
+</urlset>
+
+
+  
