@@ -108,8 +108,8 @@
     <section class="contain">
 
         <nav class="nav-bar">
-            <h1 class="logo">Fotógrafo Profesional - Andres Gardea</h1>
-            <a class="logo" href="https://www.instagram.com/direct/t/108925463862313?hl=es-la"
+            <h2 class="logo">Andres Gardea</h2>
+            <a class="logo-index" href="https://www.instagram.com/direct/t/108925463862313?hl=es-la"
                 target="_blank">Contactame</a>
         </nav>
 
@@ -141,7 +141,7 @@
 
             <div class="info">
                 <div class="desc-name">
-                    <p>Andrés Gardea</p>
+                    <h1>Fotógrafo Profesional</h1>
                 </div>
                 <div class="desc">
                     <p>Soy un Fotógrafo y Diseñador Gráfico de la ciudad de Chihuahua México.</p>
@@ -182,11 +182,6 @@
                 'Media/3.webp',
 
             ];
-
-            preloadImagesWithPromises(imagesToPreload)
-                .then(() => {
-                    console.log('Imágenes listas!');
-                });
         });
 
         function preloadImagesWithPromises(urls) {
