@@ -215,14 +215,14 @@ const stories = [
   //   backgroundClass: "t-4",
   //   linkSrc: "../Secundarias/develloper.html",
   // },
-  // {
-  //   profileName: "Servicios",
-  //   backgroundTitle: ["Servicios"],
-  //   descText: "Conoce los servicios que ofrezco, desde sesiones fotográficas hasta planes diseño tradicional y digital.",
-  //   storyImg: "../Media/5.webp",
-  //   backgroundClass: "t-5",
-  //   linkSrc: "../Secundarias/servicios.html",
-  // },
+  {
+    profileName: "Servicios",
+    backgroundTitle: ["Servicios"],
+    descText: "Conoce los servicios que ofrezco, desde sesiones fotográficas hasta planes diseño tradicional y digital.",
+    storyImg: "../Design/Poster-006.webp",
+    backgroundClass: "t-5",
+    linkSrc: "../Secundarias/servicios.html",
+  },
 
   {
     profileName: "Contáctame",
